@@ -1,10 +1,10 @@
 package com.far.suller.util
 
 object Constants {
-    const val FACEBOOK_LINK = "https://www.facebook.com/"
-    const val TWITTER_LINK = "https://www.instagram.com/"
-    const val INSTAGRAM_LINK = "https://twitter.com/"
-    const val LINKEDIN_LINK = "https://www.linkedin.com/"
+    const val FACEBOOK_LINK = "https://www.facebook.com/florencze"
+    const val TWITTER_LINK = "https://twitter.com/ArnoldSuller"
+    const val INSTAGRAM_LINK = "https://www.instagram.com/florenzearnold/"
+    const val LINKEDIN_LINK = "https://www.linkedin.com/in/florence-arnold-suller-954b12164/"
     const val GOOGLE_LINK = "https://www.google.com/"
     const val SECTION_WIDTH = 1920
     const val  FONT_FAMILY = "Roboto"
@@ -39,6 +39,8 @@ object Res{
         const val business = "business_icon.svg"
         const val design = "design_icon.svg"
         const val seo = "seo_icon.svg"
+        const val video = "video_icon.svg"
+        const val flutter = "flutter_icon.svg"
         const val link_icon = "link_icon.svg"
         const val checkmark = "checkmark_icon.svg"
         const val shield = "shield_icon.svg"

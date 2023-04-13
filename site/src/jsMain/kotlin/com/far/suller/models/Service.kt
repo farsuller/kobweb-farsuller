@@ -28,22 +28,22 @@ enum class Service(
         title = "Web Development",
         description = LOREM_IPSUM_SHORTER
     ),
+    Flutter(
+        icon = Res.Icon.flutter,
+        imageDesc = "Flutter Icon",
+        title = "Flutter Development",
+        description = LOREM_IPSUM_SHORTER
+    ),
     Design(
         icon = Res.Icon.design,
         imageDesc = "Pen Icon",
         title = "UI/UX Design",
         description = LOREM_IPSUM_SHORTER
     ),
-    Business(
-        icon = Res.Icon.business,
-        imageDesc = "Chart Icon",
-        title = "Business Analysis",
-        description = LOREM_IPSUM_SHORTER
-    ),
-    SEO(
-        icon = Res.Icon.seo,
-        imageDesc = "Megaphone Icon",
-        title = "SEO Marketing",
+    Video(
+        icon = Res.Icon.video,
+        imageDesc = "Video Icon",
+        title = "Video Editing",
         description = LOREM_IPSUM_SHORTER
     )
 }

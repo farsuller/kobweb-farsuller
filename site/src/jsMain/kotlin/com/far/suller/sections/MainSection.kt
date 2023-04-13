@@ -3,7 +3,7 @@ package com.far.suller.sections
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import com.far.suller.components.header
-import com.far.suller.components.SocialBar
+import com.far.suller.components.socialBar
 import com.far.suller.models.Section
 import com.far.suller.models.Theme
 import com.far.suller.styles.MainButtonStyle
@@ -39,9 +39,7 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
-fun mainSection(){
-    val breakpoint by rememberBreakpoint()
-
+fun mainSection(onMenuClicked: ()-> Unit){
     Box(
         modifier = Modifier
             .id(Section.Home.id)
@@ -50,7 +48,7 @@ fun mainSection(){
     ) {
 
         mainBackground()
-        mainContent(breakpoint = breakpoint)
+        mainContent(onMenuClicked = onMenuClicked)
     }
 }
 
@@ -66,14 +64,15 @@ private fun mainBackground(){
 
 @Composable
 
-private fun mainContent(breakpoint: Breakpoint){
+private fun mainContent(onMenuClicked: ()-> Unit){
+    val breakpoint by rememberBreakpoint()
 
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally)
     {
-        header()
+        header(onMenuClicked = onMenuClicked)
         Column(modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.CenterHorizontally)
@@ -100,7 +99,7 @@ private fun mainText(breakpoint: Breakpoint){
         verticalAlignment = Alignment.CenterVertically
     ){
         if(breakpoint > Breakpoint.MD){
-            SocialBar()
+            socialBar()
         }
         Column {
             P(

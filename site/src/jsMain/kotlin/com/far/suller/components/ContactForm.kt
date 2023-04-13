@@ -13,7 +13,6 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toAttrs
 import com.varabyte.kobweb.silk.components.style.toModifier
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.px
@@ -22,7 +21,12 @@ import org.jetbrains.compose.web.dom.*
 @Composable
 fun contactForm(breakpoint: Breakpoint){
     Form (
-        action = ""
+        action = "https://formspree.io/f/xeqwplzj",
+        attrs = Modifier
+            .attrsModifier {
+                attr("method", "POST")
+            }
+            .toAttrs()
 
     ){
         Label(
@@ -47,6 +51,7 @@ fun contactForm(breakpoint: Breakpoint){
                 .boxShadow(0.px,0.px,0.px,0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Full Name")
+                    attr("name", "name")
                     attr("required" , "true")
                 }
                 .toAttrs()
@@ -74,6 +79,7 @@ fun contactForm(breakpoint: Breakpoint){
                 .boxShadow(0.px,0.px,0.px,0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Email Address")
+                    attr("name", "email")
                     attr("required" , "true")
                 }
                 .toAttrs()
@@ -101,6 +107,7 @@ fun contactForm(breakpoint: Breakpoint){
                 .boxShadow(0.px,0.px,0.px,0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Your Message")
+                    attr("name", "message")
                     attr("required" , "true")
                 }
                 .toAttrs()
