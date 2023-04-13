@@ -30,7 +30,7 @@ fun homePage() {
             aboutSection()
             serviceSection()
             portfolioSection()
-            achievementSection()
+          //  achievementSection()
             testimonialSection()
             experienceSection()
             contactSection()

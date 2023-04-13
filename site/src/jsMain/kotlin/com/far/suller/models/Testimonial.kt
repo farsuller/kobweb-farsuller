@@ -11,43 +11,43 @@ enum class Testimonial(
 ) {
     First(
         image = Res.Image.avatar1,
-        fullName = "Ellen Grace",
-        profession = "Bussiness Analyst",
+        fullName = "Reynaleen Soriano",
+        profession = "CEO - Technation",
         review =  LOREM_IPSUM_LONG
     ),
 
     Second(
-    image = Res.Image.avatar2,
-    fullName = "Reynaleen Soriano",
-    profession = "CEO - Technation",
-    review =  LOREM_IPSUM_LONG
+        image = Res.Image.avatar2,
+        fullName = "Raymart Entuna",
+        profession = "Sr. Dotnet  Developer",
+        review =  LOREM_IPSUM_LONG
     ),
 
     Third(
         image = Res.Image.avatar3,
-        fullName = "Raymart Entuna",
-        profession = "Software Engineer",
+        fullName = "Marinella Esperancilla",
+        profession = "SAP Consultant",
         review =  LOREM_IPSUM_LONG
     ),
 
     Fourth(
         image = Res.Image.avatar4,
-        fullName = "Goldy Grace",
-        profession = "UI/UX Designer",
+        fullName = "Daniel Olleres",
+        profession = "Multimedia Supervisor",
         review =  LOREM_IPSUM_LONG
     ),
 
     Fifth(
         image = Res.Image.avatar5,
-        fullName = "Renz Suller",
-        profession = "Android Developer",
+        fullName = "John Cedrick Capistrano",
+        profession = "Assistant Project Manager",
         review =  LOREM_IPSUM_LONG
     ),
 
     Sixth(
         image = Res.Image.avatar6,
-        fullName = "Marinells Esperancilla",
-        profession = "SAP Consultant",
+        fullName = "Lindsay Sola",
+        profession = "Graphic Artist",
         review =  LOREM_IPSUM_LONG
     )
 }

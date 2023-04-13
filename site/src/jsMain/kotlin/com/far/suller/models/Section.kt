@@ -45,7 +45,7 @@ enum class Section(
     Testimonial(
         id = "testimonial",
         title = "Testimonial",
-        subtitle = "Happy Customers",
+        subtitle = "Recommendations",
         path= "#testimonial"
     ),
     Achievements(
