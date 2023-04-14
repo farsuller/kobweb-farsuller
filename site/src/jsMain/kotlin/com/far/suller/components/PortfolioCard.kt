@@ -55,7 +55,7 @@ fun portfolioCard(
                     modifier = Modifier
                         .id("greenOverlay")
                         .fillMaxHeight()
-                        .backgroundColor(argb(a= 0.5f,r = 0, g = 167, b = 142)),
+                        .backgroundColor(argb(a= 0.5f,r = 39, g = 70, b = 135)),
                     contentAlignment = Alignment.Center
                 ){
                     Image(
@@ -90,7 +90,7 @@ fun portfolioCard(
                     .opacity(50.percent)
                     .toAttrs()
             ){
-                Text(portfolio.title)
+                Text(portfolio.description)
             }
         }
     }

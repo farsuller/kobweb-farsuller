@@ -1,6 +1,9 @@
 package com.far.suller.models
 
-import com.far.suller.util.Constants.LOREM_IPSUM_LONGER
+import com.far.suller.util.Constants.COLLABERA
+import com.far.suller.util.Constants.EMAPTA
+import com.far.suller.util.Constants.YONDU
+import com.far.suller.util.Constants.ZIGZAG
 
 
 enum class Experience(
@@ -14,7 +17,7 @@ enum class Experience(
     First(
         number = "01",
         jobPosition = "Mobile Application Developer",
-        description = LOREM_IPSUM_LONGER,
+        description = ZIGZAG,
         company = "Zigzag OffShoring",
         from = "March 2017",
         to = "December 2020"
@@ -22,7 +25,7 @@ enum class Experience(
     Second(
         number = "02",
         jobPosition = "Mobile Application Developer",
-        description = LOREM_IPSUM_LONGER,
+        description = EMAPTA,
         company = "EMAPTA",
         from = "January 2020",
         to = "September 2020"
@@ -30,7 +33,7 @@ enum class Experience(
     Third(
         number = "03",
         jobPosition = "Android Mobile Developer",
-        description = LOREM_IPSUM_LONGER,
+        description = YONDU,
         company = "Yondu Inc.",
         from = "September 2020",
         to = "February 2022"
@@ -38,7 +41,7 @@ enum class Experience(
     Fourth(
         number = "04",
         jobPosition = "Android Developer",
-        description = LOREM_IPSUM_LONGER,
+        description = COLLABERA,
         company = "Collabera Digital",
         from = "February 2022",
         to = "Present"

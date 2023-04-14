@@ -9,6 +9,7 @@ import com.far.suller.models.Theme
 import com.far.suller.styles.AboutImageStyle
 import com.far.suller.styles.AboutTextStyle
 import com.far.suller.util.Constants
+import com.far.suller.util.Constants.ABOUT_ME
 import com.far.suller.util.Constants.LOREM_IPSUM_LONG
 import com.far.suller.util.Constants.SECTION_WIDTH
 import com.far.suller.util.ObserverViewPortEntered
@@ -128,7 +129,7 @@ private fun aboutMe(){
                 .color(Theme.Secondary.rgb)
                 .toAttrs()
         ){
-            Text(LOREM_IPSUM_LONG)
+            Text(ABOUT_ME)
         }
         Skill.values().forEach { skill ->
             SkillBar(

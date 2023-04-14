@@ -9,7 +9,12 @@ import com.far.suller.models.Theme
 import com.far.suller.styles.MainButtonStyle
 import com.far.suller.styles.MainImageStyle
 import com.far.suller.util.Constants.FONT_FAMILY
+import com.far.suller.util.Constants.HIRE_ME
+import com.far.suller.util.Constants.INTRO
 import com.far.suller.util.Constants.LOREM_IPSUM_SHORTER
+import com.far.suller.util.Constants.MAIN_INTRO
+import com.far.suller.util.Constants.NAME
+import com.far.suller.util.Constants.ROLE
 import com.far.suller.util.Constants.SECTION_WIDTH
 import com.far.suller.util.Res
 import com.varabyte.kobweb.compose.css.*
@@ -111,7 +116,7 @@ private fun mainText(breakpoint: Breakpoint){
                     .color(Theme.Primary.rgb)
                     .toAttrs()
             ){
-                Text("Hello I'm")
+                Text(INTRO)
             }
             P(
                 attrs = Modifier
@@ -122,7 +127,7 @@ private fun mainText(breakpoint: Breakpoint){
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ){
-                Text("Florence Suller")
+                Text(NAME)
 
             }
             P(
@@ -134,7 +139,7 @@ private fun mainText(breakpoint: Breakpoint){
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ){
-                Text("Android Developer")
+                Text(ROLE)
 
             }
             P(
@@ -148,7 +153,7 @@ private fun mainText(breakpoint: Breakpoint){
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ){
-                Text(LOREM_IPSUM_SHORTER)
+                Text(MAIN_INTRO)
 
             }
             Button(
@@ -166,7 +171,7 @@ private fun mainText(breakpoint: Breakpoint){
                     modifier = Modifier
                         .color(Colors.White)
                         .textDecorationLine(TextDecorationLine.None),
-                    text = "Hire me",
+                    text = HIRE_ME,
                     path = Section.Contact.path
                     )
 
