@@ -39,15 +39,15 @@ enum class Testimonial(
 
     Fifth(
         image = Res.Image.avatar5,
-        fullName = "John Cedrick Capistrano",
-        profession = "Assistant Project Manager",
+        fullName = "Ellen Grace Fabregas",
+        profession = "Business Analyst",
         review =  LOREM_IPSUM_LONG
     ),
 
     Sixth(
         image = Res.Image.avatar6,
-        fullName = "Lindsay Sola",
-        profession = "Graphic Artist",
+        fullName = "Jennilyn Pagaran Aclag",
+        profession = "Technical Standard Engineer",
         review =  LOREM_IPSUM_LONG
     )
 }
