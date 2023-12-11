@@ -16,7 +16,7 @@ enum class Experience(
 ) {
     First(
         number = "01",
-        jobPosition = "Mobile Application Developer",
+        jobPosition = "Jr. Mobile Application Developer",
         description = ZIGZAG,
         company = "Zigzag OffShoring",
         from = "March 2017",
@@ -24,7 +24,7 @@ enum class Experience(
     ),
     Second(
         number = "02",
-        jobPosition = "Mobile Application Developer",
+        jobPosition = "Jr. Mobile Application Developer",
         description = EMAPTA,
         company = "EMAPTA",
         from = "January 2020",
@@ -32,7 +32,7 @@ enum class Experience(
     ),
     Third(
         number = "03",
-        jobPosition = "Android Mobile Developer",
+        jobPosition = "(Software Engineer) Android Mobile Developer",
         description = YONDU,
         company = "Yondu Inc.",
         from = "September 2020",

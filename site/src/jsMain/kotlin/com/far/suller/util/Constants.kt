@@ -32,10 +32,43 @@ object Constants {
     const val HIRE_ME = "Hire Me"
     const val INTRO = "Hello I'm"
 
-    const val COLLABERA = "We work in Agile/Scrum environment to deliver high quality applications. Working with multiple teams for each feature of your app, and follow development and deployment standards for collaboration and code review. Direct collaboration with product owners, UI/UX. Working on integration of CLEAN architecture and APIs related to the product. Converting legacy Java codes to Kotlin for updates and new feature development. Currently working in a team. "
-    const val YONDU = "We develop and release mobile applications in teams according to customer requirements. Worked in Agile/Scrum environment to deliver high quality applications. Joined the DevOps support team to monitor, maintain, update, and troubleshoot apps already in the store. Joined our delivery team to build apps from scratch and overwrite legacy apps. Ability to lead co-developers in Android development, supervise and delegate Android development tasks, and work closely with iOS development coordination team, UI/UX designers, QA team, business analysts and Scrum masters to accomplish tasks. API integrations and features to your delivery app to display products, order tracking, Google Maps, integrated cashless payments, and push notifications. We worked with third-party vendors to meet our VAPT requirements. Conducted initial technical interviews with her new Android developer applicants."
-    const val EMAPTA = "With the help of the team, create and publish a mobile application in accordance with the demands of the client. Worked on testing and publishing the first video conferencing apps on the PlayStore and AppStore for native Android and iOS development. Delivered high-quality software while working in an agile/scrum setting. devoted time to developing publishing credentials that other developers might use to publish to the PlayStore and AppStore. A member of the team developing the client's browser application. Performed UAT for the newly introduced functionality and numerous iterations of regression testing to maintain the application's quality."
-    const val ZIGZAG = "Prioritized a list of improvements and new features for our Android applications in collaboration with the business team. Maintained and bug fixing existing utility android native applications on PlayStore. Worked with the DevOps team to manage, upload, and release cross-platform apps on the PlayStore and AppStore. Delivered high-quality software while working in an agile/scrum setting. Unity was used to create mobile games, and existing games on both platforms were upgraded and kept up to date for ad integration. Had a significant part in the release of mobile games on both platforms and in both shops. had a great deal of experience integrating analytics and ads for tracking. I closely collaborated with several departments, including UI/UX to translate designs into code and QA Engineers to deliver accepted criteria for each feature."
+    const val COLLABERA = "Worked on native Android Development using languages such as Kotlin and Java.\n" +
+            "Contributed to a team tasked with developing the installment feature for credit card applications and swift payment solutions, adhering to the CLEAN architecture while specifying the adoption of MVVM for certain features within Android development process.\n" +
+            "Collaborated with UI/UX designers to implement provided designs into development tickets.\n" +
+            "Translated design concepts into tangible features by creating development tickets.\n" +
+            "Created custom UI components for reuse by other developers, promoting consistency and efficiency across projects.\n" +
+            "Utilizing Retrofit and collaborating with core endpoint, which executes thorough validation and security measures.\n" +
+            "Provide prompt feedback to users through built-in error handling for validation or security issues.\n" +
+            "Consistently follow standard code practices for code efficiency to maintain optimal app performance across various devices.\n" +
+            "Proficient in using version control systems such as Git for Android development.\n" +
+            "Follow Git documentation provided by the platform lead to maintain versioning and traceability in the codebase.\n" +
+            "Collaborate effectively with team members, utilizing GitLab for code review and seeking approvals.\n" +
+            "Execute lint checks and unit tests as part of the testing methodology to maintain code quality and tool deployment using fastlane then testing environment on firebase.\n" +
+            "Following a systematic approach to identify and resolve bugs, replication issues and validating fixes through testing.\n"
+
+    const val YONDU = "Develop and publish a mobile application with the team in accordance with the client requirements.\n" +
+            "Worked in an Agile/Scrum environment to deliver high-quality applications.\n" +
+            "Involved in DevOps Support team for monitoring, maintaining, updating and bug fixes on the apps that are already in store.\n" +
+            "Entered delivery team to develop app from scratch overwriting a  legacy app.\n" +
+            "Able to lead with co-developers in android development and mentor and delegate android development tasks, worked closely with iOS Team for development alignment, UI/UX Designer, QA Team, Business Analyst and Scrum Master to deliver tasks.\n" +
+            "Developed more than 15 features for the revamped app.\n" +
+            "Worked on third party meeting the requirements of Vulnerability Assessment and Penetration Testing.\n" +
+            "Familiar on Firebase Crashlytics to monitor crashes and bug fixes.\n" +
+            "Conducting initial technical interviews for new android developer applicants\n"
+
+    const val EMAPTA = "Develop and publish a mobile application with the team in accordance with the client requirements.\n" +
+            "Worked on native android and ios development, testing and publication of initial video conferencing apps on PlayStore and AppStore. \n" +
+            "Worked in an Agile/Scrum environment to deliver high-quality software.\n" +
+            "Worked on providing publishing credentials for other developers to publish PlayStore and AppStore. \n" +
+            "Part of a team for initial development of a browser app.\n" +
+            "Performed UAT for the new feature added and multiple rounds of regression testing to maintain the quality of the application. \n"
+    const val ZIGZAG = "Worked with the business team to prioritize a list of enhancements and new features for our Android applications. \n" +
+            "Maintained and bug fixing existing utility android native applications on PlayStore.\n" +
+            "Worked with DevOps team in handling and uploading and releases of cross-platform applications on PlayStore and AppStore. \n" +
+            "Worked in an Agile/Scrum environment to deliver high-quality software.\n" +
+            "Worked on mobile games using Unity, updated and maintained existing mobile games on both platforms for Ads integration.  Played a key role in publishing mobile games, both platform and published in both stores.\n" +
+            "Gained immense experience in Ads integration and analytics integration for tracking.\n" +
+            "Worked closely on different departments like UI/UX to convert designs into code, QA Engineers to deliver accepted criterias on each feature.\n"
 
 }
 

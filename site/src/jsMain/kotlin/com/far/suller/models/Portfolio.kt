@@ -22,32 +22,32 @@ enum class Portfolio(
     One(
         image = Res.Image.portfolio1,
         title = "Porfoliofs",
-        description = "Install if you want to see a flutter simple portfolio app. My first flutter publish app in PlayStore",
+        description = "Feel free to install if you're interested in exploring a simple Flutter portfolio app. It's my first Flutter app that has been published on the Play Store.",
         link = PORFOLIOF
 
     ),
     Two(
         image = Res.Image.portfolio2,
         title = "Spark Cleaner",
-        description = "Spark Cleaner is the best, fast and secure with very light optimizer app tool for your smartphone without having the need to root it as fast like a spark.",
+        description = "My personal app is currently unpublished, as I have ceased maintaining and updating it, including any requirements on the Play Store.",
         link = SPARK_CLEANER_LINK
     ),
     Three(
         image = Res.Image.portfolio3,
         title = "McDelivery PH",
-        description = "Enjoy an updated, modern interface designed to make ordering your McDo favorites easier! Choose the nearest store to deliver to your doorstep with the Map Pinning and Store Selection feature.",
+        description = "Our team redesigned and launched the McDelivery PH app on the market while I was still employed at my previous company.",
         link = MCDELIVERY_LINK
     ),
     Four(
         image = Res.Image.portfolio4,
         title = "Puregold Mobile",
-        description = "Want to shop groceries straight from the comforts of your home, office or while travelling?",
+        description = "I managed and maintained this app during my time in the DevOps role",
         link = PUREGOLD
     ),
     Five(
         image = Res.Image.portfolio5,
         title = "UnionBank Online",
-        description = "Get started by opening an account in-app, without ever having to step into a branch. Easily manage your accounts, your cards, transfer funds, pay your bills and more, with just the tap of your finger.",
+        description = "I was part of a specific team that developed a feature related to installments, deployed it on the app for users, and subsequently maintained other features within different teams.",
         link = UNIONBANK
     ),
 
