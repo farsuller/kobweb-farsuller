@@ -79,7 +79,7 @@ private fun portfolioCards(breakpoint: Breakpoint){
             portfolioCard(
                 modifier = Modifier
                     .margin(
-                        right = if( portfolio!= Portfolio.Five) 25.px
+                        right = if( portfolio!= Portfolio.EarDoctor) 25.px
                         else 0.px),
                 portfolio = portfolio,
                 link = portfolio.link

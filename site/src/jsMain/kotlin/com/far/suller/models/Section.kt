@@ -27,7 +27,7 @@ enum class Section(
     Portfolio(
         id = "portfolio",
         title = "Portfolio",
-        subtitle = "My Work",
+        subtitle = "Project Involvements and Others",
         path= "#portfolio"
     ),
     Experience(

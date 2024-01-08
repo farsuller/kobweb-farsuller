@@ -1,10 +1,9 @@
 package com.far.suller.models
 
 import com.far.suller.util.Constants.ANDROID_SERVICE
+import com.far.suller.util.Constants.CROSS_PLATFORM_SERVICE
 import com.far.suller.util.Constants.EDITING_SERVICE
-import com.far.suller.util.Constants.FLUTTER_SERVICE
 import com.far.suller.util.Constants.IOS_SERVICE
-import com.far.suller.util.Constants.LOREM_IPSUM_SHORTER
 import com.far.suller.util.Constants.UI_UX_SERVICE
 import com.far.suller.util.Constants.WEB_SERVICE
 import com.far.suller.util.Res
@@ -34,11 +33,11 @@ enum class Service(
         title = "Web Development",
         description = WEB_SERVICE
     ),
-    Flutter(
+    CrossPlatform(
         icon = Res.Icon.flutter,
-        imageDesc = "Flutter Icon",
-        title = "Flutter Development",
-        description = FLUTTER_SERVICE
+        imageDesc = "Cross Platform Icon",
+        title = "Cross Platform Development",
+        description = CROSS_PLATFORM_SERVICE
     ),
     Design(
         icon = Res.Icon.design,
