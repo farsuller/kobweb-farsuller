@@ -17,7 +17,7 @@ enum class Skill(
         percentage = 75.percent
     ),
     HardWordking(
-        title = "Hard Wordking",
+        title = "Hard Working",
         percentage = 85.percent
     ),
     Values(
