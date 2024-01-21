@@ -51,3 +51,9 @@ kobweb run --env prod --mode dumb
 Kobweb also supports exporting to a static layout which is compatible with static hosting providers, such as GitHub
 Pages, Netlify, Firebase, any presumably all the others. You can read more about that approach here:
 https://bitspittle.dev/blog/2022/staticdeploy
+
+
+```bash
+kobweb export --layout static   
+```
+Production mode for static website

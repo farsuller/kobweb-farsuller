@@ -4,6 +4,7 @@ package com.far.suller.models
 import com.far.suller.util.Constants.MCDELIVERY_LINK
 import com.far.suller.util.Constants.PARKINGBUDDY
 import com.far.suller.util.Constants.PUREGOLD
+import com.far.suller.util.Constants.SOLOEATS
 import com.far.suller.util.Constants.SOLOFOLIO
 import com.far.suller.util.Constants.SOLOSCAPE
 import com.far.suller.util.Constants.SPARK_CLEANER_LINK
@@ -31,7 +32,13 @@ enum class Portfolio(
         description = "Solofolio - Version 1.0 \n" +
                 "Jetpack Compose Upgrade: SoloFolio is now revamped using Jetpack Compose for a more modern and dynamic portfolio experience.",
         link = SOLOFOLIO
-
+    ),
+    SoloEats(
+        image = Res.Image.soloeats,
+        title = "SoloEats",
+        description = "SoloEats - Version 1.0 \n" +
+                "SoloEats 1.0 is a demo version, not processing real transactions. The release emphasizes an effortless dining experience.",
+        link = SOLOEATS
     ),
     UnionBankApp(
         image = Res.Image.portfolio5,

@@ -9,6 +9,7 @@ object Constants {
 
     const val SOLOFOLIO = "https://play.google.com/store/apps/details?id=com.portfolio.portfoliofs"
     const val SOLOSCAPE = "https://play.google.com/store/apps/details?id=com.soloscape.compose"
+    const val SOLOEATS = "https://play.google.com/store/apps/details?id=com.solo.solodemo"
     const val SPARK_CLEANER_LINK = "https://play.google.com/store/apps/details?id=com.booster.sparkcleaner"
     const val MCDELIVERY_LINK = "https://play.google.com/store/apps/details?id=ph.mobext.mcdelivery"
     const val PUREGOLD = "https://play.google.com/store/apps/details?id=com.grocery.puregold"
@@ -85,6 +86,7 @@ object Res{
         const val aboutImage = "about_image.png"
         const val soloscape = "portfolio1.png"
         const val solofolio = "solofolio.jpg"
+        const val soloeats = "soloeats.png"
         const val portfolio2 = "portfolio2.png"
         const val portfolio3 = "portfolio3.png"
         const val portfolio4 = "portfolio4.png"
