@@ -54,7 +54,7 @@ fun experienceCard (
 @Composable
 private fun experienceDescription(
     active: Boolean,
-    description:String)
+    description:List<String>)
 {
     Box(
         modifier = Modifier
@@ -63,17 +63,21 @@ private fun experienceDescription(
             .padding(all = 14.px)
             .backgroundColor(if(active) Theme.Primary.rgb else Theme.LighterGray.rgb)
     ) {
-        P(
-            attrs = Modifier
-                .margin(topBottom = 0.px)
-                .fontFamily(FONT_FAMILY)
-                .fontSize(14.px)
-                .lineHeight(1.6)
-                .fontWeight(FontWeight.Normal)
-                .color(if(active) Colors.White else Theme.Secondary.rgb)
-                .toAttrs()
-        ){
-            Text(description)
+        Column {
+            description.forEach { text ->
+                P(
+                    attrs = Modifier
+                        .margin(topBottom = 0.px)
+                        .fontFamily(FONT_FAMILY)
+                        .fontSize(14.px)
+                        .lineHeight(1.6)
+                        .fontWeight(FontWeight.Normal)
+                        .color(if(active) Colors.White else Theme.Secondary.rgb)
+                        .toAttrs()
+                ){
+                    Text(text)
+                }
+            }
         }
     }
 

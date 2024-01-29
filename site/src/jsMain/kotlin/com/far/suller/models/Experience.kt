@@ -9,7 +9,7 @@ import com.far.suller.util.Constants.ZIGZAG
 enum class Experience(
     val number:String,
     val jobPosition:String,
-    val description:String,
+    val description:List<String>,
     val company:String,
     val from:String,
     val to:String
