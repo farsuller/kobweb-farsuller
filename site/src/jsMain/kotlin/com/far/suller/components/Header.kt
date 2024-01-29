@@ -72,7 +72,7 @@ fun leftSide(breakpoint: Breakpoint,
 fun rightSide(){
     Row(
         modifier = Modifier.fillMaxWidth()
-            .borderRadius(r=50.px)
+            .borderRadius(r = 50.px)
             .backgroundColor(Theme.LighterGray.rgb)
             .padding(all = 20.px),
         horizontalArrangement = Arrangement.End

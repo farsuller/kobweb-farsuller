@@ -31,6 +31,7 @@ fun homePage() {
             serviceSection()
             portfolioSection()
           //  achievementSection()
+            skillsSection()
             testimonialSection()
             experienceSection()
             contactSection()

@@ -4,7 +4,7 @@ import org.jetbrains.compose.web.css.CSSSizeValue
 import org.jetbrains.compose.web.css.CSSUnit
 import org.jetbrains.compose.web.css.percent
 
-enum class Skill(
+enum class MeRate(
     val title: String,
     val percentage: CSSSizeValue<CSSUnit.percent>
 ) {

@@ -4,13 +4,12 @@ import androidx.compose.runtime.*
 import com.far.suller.components.sectionTitle
 import com.far.suller.components.SkillBar
 import com.far.suller.models.Section
-import com.far.suller.models.Skill
+import com.far.suller.models.MeRate
 import com.far.suller.models.Theme
 import com.far.suller.styles.AboutImageStyle
 import com.far.suller.styles.AboutTextStyle
 import com.far.suller.util.Constants
 import com.far.suller.util.Constants.ABOUT_ME
-import com.far.suller.util.Constants.LOREM_IPSUM_LONG
 import com.far.suller.util.Constants.SECTION_WIDTH
 import com.far.suller.util.ObserverViewPortEntered
 import com.far.suller.util.Res
@@ -102,7 +101,7 @@ private fun aboutMe(){
         distanceFromTop = 200.0,
         onViewPortEntered = {
             viewPortEntered = true
-            Skill.values().forEach {skill ->
+            MeRate.values().forEach { skill ->
                 scope.launch{
                     animateNumbers(
                         number = skill.percentage.value.toInt(),
@@ -131,7 +130,7 @@ private fun aboutMe(){
         ){
             Text(ABOUT_ME)
         }
-        Skill.values().forEach { skill ->
+        MeRate.values().forEach { skill ->
             SkillBar(
                 name = skill.title,
                 index = skill.ordinal,
