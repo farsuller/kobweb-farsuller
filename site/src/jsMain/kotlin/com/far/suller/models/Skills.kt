@@ -29,20 +29,25 @@ enum class Skills (
     ),
     MobileDesign(
         title = "Mobile Design",
-        year = 5
+        year = 7
     ),
     MVVM(
         title = "MVVM Architecture",
-        year = 5
+        year = 7
     ),
-    MVP(
-        title = "MVP Architecture",
-        year = 2
+    VersionControl(
+        title = "Git",
+        year = 7
     ),
-    CLEAN(
-        title = "CLEAN Architecture",
-        year = 2
+    RESTAPI(
+        title = "Rest API",
+        year = 4
     ),
+    Retrofit(
+        title = "Retrofit",
+        year = 4
+    ),
+
     DI(
         title = "Dependency Injection",
         year = 4
@@ -51,13 +56,15 @@ enum class Skills (
         title = "Modularization",
         year = 3
     ),
-    JC(
-        title = "Jetpack Compose",
-        year = 1
+
+
+    MVC(
+        title = "MVC Architecture",
+        year = 2
     ),
-    VersionControl(
-        title = "Git",
-        year = 7
+    CLEAN(
+        title = "CLEAN Architecture",
+        year = 2
     ),
     RxKotlin(
         title = "RxKotlin",
@@ -71,5 +78,16 @@ enum class Skills (
         title = "Unit Testing",
         year = 2
     ),
-
+    Flutter(
+        title = "Flutter",
+        year = 1
+    ),
+    Dart(
+        title = "Dart",
+        year = 1
+    ),
+    JC(
+        title = "Jetpack Compose",
+        year = 1
+    ),
 }
