@@ -4,6 +4,7 @@ package com.far.suller.models
 import com.far.suller.util.Constants.MCDELIVERY_LINK
 import com.far.suller.util.Constants.PARKINGBUDDY
 import com.far.suller.util.Constants.PUREGOLD
+import com.far.suller.util.Constants.SOLODAILY
 import com.far.suller.util.Constants.SOLOEATS
 import com.far.suller.util.Constants.SOLOFOLIO
 import com.far.suller.util.Constants.SOLOSCAPE
@@ -39,6 +40,14 @@ enum class Portfolio(
         description = "SoloEats - Version 1.0 \n" +
                 "SoloEats 1.0 is a demo version, not processing real transactions. The release emphasizes an effortless dining experience.",
         link = SOLOEATS
+    ),
+
+    SoloDaily(
+        image = Res.Image.solodaily,
+        title = "SoloDaily",
+        description = "SoloDaily - Version 1.0 \n" +
+                "Browse Latest News: Stay up-to-date with breaking news and trending stories from around the world. Search Functionality: Easily find articles on topics that interest you with our intuitive search feature. Bookmark Articles: Save articles for later reading with our convenient bookmarking feature.",
+        link = SOLODAILY
     ),
     UnionBankApp(
         image = Res.Image.portfolio5,
