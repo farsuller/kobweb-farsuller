@@ -20,10 +20,6 @@ object Constants {
     const val SECTION_WIDTH = 1920
     const val  FONT_FAMILY = "Roboto"
 
-    const val LOREM_IPSUM_SHORTER = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    const val LOREM_IPSUM_LONG = "Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-    const val LOREM_IPSUM_LONGER = "Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum has been the industry's standard dummy since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-
     const val ANDROID_SERVICE = "Bringing seven years of hands-on experience in crafting scalable mobile applications. Proficient with Android development tools including Android Studio, Gradle, and the Android SDK. Familiar with MVVM and CLEAN Architecture using Kotlin/Java."
     const val IOS_SERVICE = "Although my experience in iOS development is not extensive, I have effectively maintained iOS apps and released them on the App Store. Currently, I am getting familiar with well-known iOS development frameworks like UIKit and SwiftUI."
     const val WEB_SERVICE = "Continuously fascinated by coding and crafting digital solutions, I've begun familiarizing myself with renowned web development frameworks like Kobweb, and this static website is a product of that exploration."
@@ -32,57 +28,69 @@ object Constants {
     const val EDITING_SERVICE = "Bringing more than a decade of experience in video editing, including proficiency in visual effects and compositing using tools like Adobe After Effects."
 
     const val ABOUT_ME = "I have worked on various Android projects, ranging from small-scale applications to large and complex ones. Well-versed in Android development tools, such as Android Studio, Gradle, and the Android SDK. Also have extensive experience in working with different APIs, including Google Maps, Firebase, and third-party APIs."
-    const val MAIN_INTRO = "I bring to the table 7 years of hands-on experience as an accomplished Android developer. My expertise lies in crafting top-notch and scalable mobile applications. I am driven by a deep passion for developing cutting-edge Android applications that not only captivate visually but also deliver a seamless user experience."
+    const val MAIN_INTRO = "I offer 7 years of practical experience in Android development. My passion is rooted in the ever-evolving realm of mobile app development, where I've acquired extensive hands-on expertise in Android mobile development.\n" +
+            "\n" +
+            "I believe that my ongoing journey in this field will create a significant impact as I stay abreast of new trends and technologies, benefiting clients or companies.\n" +
+            "\n" +
+            "Moving from traditional native development, I'm currently immersed in building apps using Jetpack Compose and transitioning towards Kotlin or Compose Multiplatform."
+
     const val NAME = "Florence Arnold R. Suller"
-    const val ROLE = "Android Developer"
+    const val ROLE = "Current: Software Developer Engineer"
     const val HIRE_ME = "Hire Me"
     const val INTRO = "Hello I'm"
 
+    val FPT = listOf(
+        "* The utilized technologies include Android development, Android Studio, Kotlin, Jetpack Compose, MVI (Model-View-Intent), Flatbuffer, Bitbucket, and a modular approach. ",
+        "* Attend daily stand-up meetings to discuss project progress and roadblocks. Adhere to Scrum framework principles and practices throughout the project lifecycle.",
+        "* Participate in server-side development and bug tasks and accessing servers through Linux operating systems.",
+        "* Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
+        "* Set up the server environment by installing the necessary Linux distribution on the designated hardware or virtual machine.",
+        "* Identify the specific bug tickets assigned for pre-merge investigation."
+    )
+
     val COLLABERA = listOf(
-        "* Worked on native Android Development using languages such as Kotlin and Java.",
-        "* Contributed to a team tasked with developing the installment feature for credit card applications and swift payment solutions, adhering to the CLEAN architecture while specifying the adoption of MVVM for certain features within Android development process.",
-        "* Collaborated with UI/UX designers to implement provided designs into development tickets.",
-        "* Translated design concepts into tangible features by creating development tickets.",
-        "* Created custom UI components for reuse by other developers, promoting consistency and efficiency across projects.",
-        "* Utilizing Retrofit and collaborating with core endpoint, which executes thorough validation and security measures.",
-        "* Provide prompt feedback to users through built-in error handling for validation or security issues.",
+        "* The utilized technologies include Android SDK, Kotlin, Java, XML, REST API, Firebase, Gitlab, Modular, MVVM, CLEAN, Version Control, CI CD, and Retrofit.",
+        "* Engage in daily scrum meetings, utilize Jira Kanban tickets to track project progress, and adhere to acceptance criteria for efficient task completion in an Agile development environment.",
+        "* Collaborated with a cross-functional team, including product owners, delivery leads, team leads, back-end developers, and UI/UX designers, ensuring seamless communication and alignment to achieve project goals.",
+        "* Proficient in utilizing dependency injection and modularizing features, adept at seamlessly integrating new API endpoints for enhanced application functionality.",
         "* Consistently follow standard code practices for code efficiency to maintain optimal app performance across various devices.",
-        "* Proficient in using version control systems such as Git for Android development.",
-        "* Follow Git documentation provided by the platform lead to maintain versioning and traceability in the codebase.",
-        "* Collaborate effectively with team members, utilizing GitLab for code review and seeking approvals.",
-        "* Execute lint checks and unit tests as part of the testing methodology to maintain code quality and tool deployment using fastlane then testing environment on firebase.",
-        "* Following a systematic approach to identify and resolve bugs, replication issues and validating fixes through testing."
+        "* Successfully executed tasks in version control, automated unit testing, CI/CD processes, and product build delivery by adhering to provided documentation, contributing to an efficient and organized development workflow.",
+        "* Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders."
     )
 
     val YONDU = listOf(
-        "* Worked on native Android Development using languages such as Kotlin and Java.",
-        "* Employing Agile/Scrum methodologies in the work environment to ensure the delivery of high-quality applications. In my daily development activities, I actively participate in Daily Scrum Meetings (DSM) and update Jira Kanban tickets to keep track of progress.",
+        "* The utilized technologies include Android SDK, Kotlin, Java, XML, REST API, Firebase (Crashlytics, Remote Configuration, App Distribution), Google Cloud Platform, Google Maps, Gitlab, MVVM, Retrofit, and Version Control.",
+        "* Employing Agile/Scrum methodologies in the work environment to ensure the delivery of high-quality applications.",
+        "* I actively participate in Daily Scrum Meetings (DSM) and update Jira Kanban tickets to keep track of progress.",
+        "* While a DevOps team member, I conducted investigations of bug tickets, analyzing reported issues to identify root causes and potential solutions.",
+        "* Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
         "* Spearheaded Android development tasks, ensuring the app meets client requirements and collaborating with the team for successful publication.",
-        "* Assumed a leadership position in Android development, guiding co-developers and overseeing task delegation.",
         "* Collaborated with the other platform developers, UI/UX Designer, QA Team, Business Analyst, and Scrum Master to align development efforts seamlessly.",
         "* Contributed to the creation of over 15 features for the enhanced client's app, an online retail food order and delivery platform.",
-        "* Addressed third-party requirements for Vulnerability Assessment and Penetration Testing.",
-        "* Utilized Firebase Crashlytics, Remote Configuration, App Distribution.",
-        "* Conducted initial technical interviews for potential Android developer applicants."
     )
 
     val EMAPTA = listOf(
-        "* Develop and publish a mobile application with the team in accordance with the client requirements.",
-        "* Worked on native Android and iOS development, testing, and publication of initial video conferencing apps on PlayStore and AppStore.",
-        "* Worked in an Agile/Scrum environment to deliver high-quality software.",
-        "* Worked on providing publishing credentials for other developers to publish on PlayStore and AppStore.",
-        "* Part of a team for the initial development of a browser app.",
-        "* Performed UAT for the new feature added and multiple rounds of regression testing to maintain the quality of the application."
+        "* Developed and published mobile applications in line with client requirements, utilizing technologies including Android SDK, Kotlin, XML, 3rd Party API Integrations, Analytics, Xcode, Objective-C, Bitbucket, MVP, and Version Control.",
+        "* Participated in Daily Scrum Meetings (DSM) and updated Jira Kanban tickets to monitor progress.",
+        "* Provided support for publishing credentials for the Play Store and App Store to other developers, leading the development of browser and video conference apps.",
+        "* Worked closely with the development team to address platform-specific requirements and ensure seamless integration for the browser and video conference apps.",
+        "* Collaborated with overseas developers to facilitate the submission and approval process on both platforms.",
+        "* Monitored the status of app submissions, addressing feedback or concerns raised by the Play Store and App Store review teams.",
+        "* Collaborated with team members to identify and address issues or bugs found during testing.",
+        "* Participated in regression testing to ensure existing features remain unaffected by new changes.",
+        "* Utilized appropriate tools and platforms to maintain and distribute documentation effectively within the team and to relevant stakeholders."
     )
     val ZIGZAG = listOf(
-        "* Worked with the business team to prioritize a list of enhancements and new features for our Android applications.",
-        "* Maintained and bug fixing existing utility android native applications on PlayStore.",
-        "* Worked with DevOps team in handling and uploading releases of cross-platform applications on PlayStore and AppStore.",
-        "* Worked in an Agile/Scrum environment to deliver high-quality software.",
-        "* Worked on mobile games using Unity, updated and maintained existing mobile games on both platforms for Ads integration.",
-        "* Played a key role in publishing mobile games, both platform and published in both stores.",
-        "* Gained immense experience in Ads integration and analytics integration for tracking.",
-        "* Worked closely with different departments like UI/UX to convert designs into code, QA Engineers to deliver accepted criterias on each feature."
+        "* The utilized technologies include Android SDK, Java, Kotlin, XML, 3rd Party Api Integrations, Analytics, Xcode, Objective-C, Unity,  C#, Flutter, Bitbucket, MVVM, Version Control.",
+        "* Collaborated with platform developers, UI/UX Designer, QA Team, Product Manager, and Scrum Master to align development efforts seamlessly.",
+        "* Participated in Daily Scrum Meetings (DSM) and updated Jira Kanban tickets to track progress.",
+        "* Maintained and enhanced Android apps built in Kotlin and Java, including adding data for the 'scan other apps' feature.",
+        "* Created automated scripts to scrape data from the Chrome Store and Play Store.",
+        "* Ensured seamless integration of third-party advertising solutions to optimize revenue generation.",
+        "* Played a key role in preparing games for publication on both the Play Store and the App Store, adhering to platform-specific guidelines.",
+        "* Actively participated in company meetings and seminars to stay updated on organizational goals, projects, and industry trends.",
+        "* Engaged in outdoor activities organized by the company to foster team building, morale, and employee well-being.",
+        "* Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
     )
 
 }

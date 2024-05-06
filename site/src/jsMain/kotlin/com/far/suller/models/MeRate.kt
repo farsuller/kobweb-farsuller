@@ -8,25 +8,24 @@ enum class MeRate(
     val title: String,
     val percentage: CSSSizeValue<CSSUnit.percent>
 ) {
-    Creative(
-        title = "Creative",
-        percentage = 60.percent
-    ),
-    Accountable(
-        title = "Accountable",
-        percentage = 75.percent
-    ),
-    HardWordking(
-        title = "Hard Working",
-        percentage = 85.percent
-    ),
-    Values(
-        title = "Value for Money",
-        percentage = 80.percent
-    ),
     Delivery(
         title = "On Time Delivery",
-        percentage = 90.percent
+        percentage = 100.percent
     ),
-
+    Communication(
+        title = "Communication Skills",
+        percentage = 93.percent
+    ),
+    ProblemSolving(
+        title = "Problem Solving",
+        percentage = 91.percent
+    ),
+    TeamPlayer(
+        title = "Team Player",
+        percentage = 95.percent
+    ),
+    Adaptability(
+        title = "Adaptability",
+        percentage = 94.percent
+    )
 }

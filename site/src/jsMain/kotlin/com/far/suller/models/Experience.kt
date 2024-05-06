@@ -2,6 +2,7 @@ package com.far.suller.models
 
 import com.far.suller.util.Constants.COLLABERA
 import com.far.suller.util.Constants.EMAPTA
+import com.far.suller.util.Constants.FPT
 import com.far.suller.util.Constants.YONDU
 import com.far.suller.util.Constants.ZIGZAG
 
@@ -44,6 +45,14 @@ enum class Experience(
         description = COLLABERA,
         company = "Collabera Digital",
         from = "February 2022",
+        to = "January 2024"
+    ),
+    Fifth(
+        number = "05",
+        jobPosition = "Software Developer Engineer",
+        description = FPT,
+        company = "FPT Software Philippines Corp.",
+        from = "February 2024",
         to = "Present"
     ),
 }

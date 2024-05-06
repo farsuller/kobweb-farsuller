@@ -11,7 +11,6 @@ import com.far.suller.styles.MainImageStyle
 import com.far.suller.util.Constants.FONT_FAMILY
 import com.far.suller.util.Constants.HIRE_ME
 import com.far.suller.util.Constants.INTRO
-import com.far.suller.util.Constants.LOREM_IPSUM_SHORTER
 import com.far.suller.util.Constants.MAIN_INTRO
 import com.far.suller.util.Constants.NAME
 import com.far.suller.util.Constants.ROLE

@@ -1,6 +1,5 @@
 package com.far.suller.models
 
-import com.far.suller.util.Constants.LOREM_IPSUM_LONG
 import com.far.suller.util.Res
 
 enum class Testimonial(

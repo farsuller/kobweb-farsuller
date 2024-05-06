@@ -58,10 +58,10 @@ private fun experienceContent(){
                 .margin(bottom = 25.px),
             section = Section.Experience
         )
-        Experience.values().forEach { experience ->
+        Experience.values().reversed().forEach { experience ->
             experienceCard(
                 breakpoint = breakpoint,
-                active = experience == Experience.Fourth,
+                active = experience == Experience.Fifth,
                 experience = experience,
                 animatedMargin = animatedMargin
             )
