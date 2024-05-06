@@ -28,12 +28,12 @@ fun homePage() {
                 menuOpened = true
             })
             aboutSection()
-            serviceSection()
+            experienceSection()
             portfolioSection()
           //  achievementSection()
             skillsSection()
+            serviceSection()
             testimonialSection()
-            experienceSection()
             contactSection()
             footerSection()
         }

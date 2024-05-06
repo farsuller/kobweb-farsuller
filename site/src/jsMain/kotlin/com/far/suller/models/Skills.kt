@@ -32,7 +32,7 @@ enum class Skills (
         year = 7
     ),
     MVVM(
-        title = "MVVM Architecture",
+        title = "MVVM",
         year = 7
     ),
     VersionControl(
@@ -43,29 +43,29 @@ enum class Skills (
         title = "Rest API",
         year = 4
     ),
-    Retrofit(
-        title = "Retrofit",
-        year = 4
-    ),
 
     DI(
         title = "Dependency Injection",
         year = 4
     ),
     Modularization(
-        title = "Modularization",
+        title = "Modular",
         year = 3
     ),
 
-
     MVC(
-        title = "MVC Architecture",
+        title = "MVC",
         year = 2
     ),
     CLEAN(
         title = "CLEAN Architecture",
         year = 2
     ),
+    MVI(
+        title = "MVI",
+        year = 1
+    ),
+
     RxKotlin(
         title = "RxKotlin",
         year = 2
