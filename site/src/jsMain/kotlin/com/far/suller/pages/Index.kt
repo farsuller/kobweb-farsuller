@@ -27,11 +27,11 @@ fun homePage() {
             mainSection(onMenuClicked = {
                 menuOpened = true
             })
-            aboutSection()
+            skillsSection()
+            //aboutSection()
             experienceSection()
             portfolioSection()
           //  achievementSection()
-            skillsSection()
             serviceSection()
             testimonialSection()
             contactSection()

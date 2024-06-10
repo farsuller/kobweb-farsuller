@@ -8,6 +8,7 @@ import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
+import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -54,24 +55,26 @@ fun skillsCard(
                 }
             }
 
-            Box(
-                Modifier
-                    .padding(topBottom = 5.px, leftRight = 30.px)
+            Box(Modifier.padding(topBottom = 5.px))
 
-            ){
-                P(
-                    attrs = Modifier
-                        .fillMaxWidth()
-                        .margin(topBottom = 0.px)
-                        .fontFamily(FONT_FAMILY)
-                        .fontSize(16.px)
-                        .fontWeight(FontWeight.Bolder)
-                        .color(Theme.Primary.rgb)
-                        .toAttrs()
-                ) {
-                    Text(if (skills.year == 1) "\n${skills.year} year" else "\n${skills.year} years")
-                }
-            }
+//            Box(
+//                Modifier
+//                    .padding(topBottom = 5.px, leftRight = 30.px)
+//
+//            ){
+//                P(
+//                    attrs = Modifier
+//                        .fillMaxWidth()
+//                        .margin(topBottom = 0.px)
+//                        .fontFamily(FONT_FAMILY)
+//                        .fontSize(16.px)
+//                        .fontWeight(FontWeight.Bolder)
+//                        .color(Theme.Primary.rgb)
+//                        .toAttrs()
+//                ) {
+//                    Text(if (skills.year == 1) "\n${skills.year} year" else "\n${skills.year} years")
+//                }
+//            }
 
         }
 
