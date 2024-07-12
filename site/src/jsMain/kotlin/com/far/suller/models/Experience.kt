@@ -21,7 +21,7 @@ enum class Experience(
         description = ZIGZAG,
         company = "Zigzag OffShoring",
         from = "March 2017",
-        to = "December 2020"
+        to = "December 2019"
     ),
     Second(
         number = "02",
