@@ -53,8 +53,12 @@ enum class Skills(
         title = "CLEAN",
         year = 2
     ),
-
     VersionControl(
+        title = "Version Control",
+        year = 7
+    ),
+
+    Git(
         title = "Git",
         year = 7
     ),
@@ -64,7 +68,7 @@ enum class Skills(
     ),
 
     CICD(
-        title = "CI CD",
+        title = "CI/CD",
         year = 2
     ),
 
@@ -107,8 +111,28 @@ enum class Skills(
         year = 2
     ),
 
+    Firebase(
+        title = "Firebase",
+        year = 3
+    ),
+
+    OOP(
+        title = "OOP",
+        year = 3
+    ),
+
+    Leadership(
+        title = "Leadership",
+        year = 3
+    ),
+
     Linux(
         title = "Linux",
+        year = 3
+    ),
+
+    SQL(
+        title = "SQL",
         year = 3
     ),
 
