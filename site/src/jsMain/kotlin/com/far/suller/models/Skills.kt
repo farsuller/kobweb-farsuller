@@ -34,6 +34,11 @@ enum class Skills(
         year = 7
     ),
 
+    UIImplementation(
+        title = "UI Implementation",
+        year = 7
+    ),
+
     MVVM(
         title = "MVVM",
         year = 7
@@ -89,6 +94,23 @@ enum class Skills(
 
     Modularization(
         title = "Modular",
+        year = 3
+    ),
+    JIRA(
+        title = "JIRA",
+        year = 3
+    ),
+    Gitlab(
+        title = "Gitlab",
+        year = 3
+    ),
+    Bitbucket(
+        title = "Bitbucket",
+        year = 3
+    ),
+
+    Figma(
+        title = "Figma",
         year = 3
     ),
 
@@ -152,5 +174,4 @@ enum class Skills(
         title = "C#",
         year = 1
     ),
-
 }
