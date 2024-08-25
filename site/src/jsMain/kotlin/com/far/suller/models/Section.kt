@@ -12,18 +12,6 @@ enum class Section(
         subtitle = "",
         path= "#home"
     ),
-    About(
-        id = "about",
-        title = "About me",
-        subtitle = "Why Hire Me?",
-        path= "#about"
-    ),
-    Service(
-        id = "service",
-        title = "Service",
-        subtitle = "I'm Good at",
-        path= "#service"
-    ),
     Portfolio(
         id = "portfolio",
         title = "Portfolio",
@@ -36,11 +24,11 @@ enum class Section(
         subtitle = "Work Experience",
         path= "#experience"
     ),
-    Contact(
-        id = "contact",
-        title = "Contact Me",
-        subtitle = "Get in Touch",
-        path= "#contact"
+    Service(
+        id = "service",
+        title = "Service",
+        subtitle = "I'm Good at",
+        path= "#service"
     ),
     Testimonial(
         id = "testimonial",
@@ -48,6 +36,19 @@ enum class Section(
         subtitle = "Recommendations",
         path= "#testimonial"
     ),
+    Contact(
+        id = "contact",
+        title = "Contact Me",
+        subtitle = "Get in Touch",
+        path= "#contact"
+    ),
+    About(
+        id = "about",
+        title = "About me",
+        subtitle = "Why Hire Me?",
+        path= "#about"
+    ),
+
     Achievements(
         id = "achievements",
         title = "Achievements",

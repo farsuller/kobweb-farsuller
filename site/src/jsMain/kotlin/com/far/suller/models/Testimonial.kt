@@ -10,43 +10,42 @@ enum class Testimonial(
 ) {
     First(
         image = Res.Image.avatar1,
-        fullName = "Reynaleen Soriano",
-        profession = "CEO - Technation",
-        review =  "His coding prowess and attention to detail ensured our mobile app exceeded expectations."
+        fullName = "John Paul Ebreo",
+        profession = "Senior Software Engineer",
+        review = "Florence is a great developer, not only technically but also as a team player.",
     ),
 
     Second(
         image = Res.Image.avatar2,
-        fullName = "Raymart Entuna",
-        profession = "Sr. Dotnet  Developer",
-        review =  "Brought a new level of expertise to our team. His dedication to creating seamless user experiences is unmatched."
+        fullName = "Mark Abenir",
+        profession = "Senior Java Developer",
+        review = "Exceptional coding, strong teamwork, and creativity skills. Able to align the app development and design with the company goals.",
     ),
 
     Third(
         image = Res.Image.avatar3,
-        fullName = "Marinella Esperancilla",
-        profession = "SAP Consultant",
-        review =  "His ability to solve complex problems and deliver elegant solutions is commendable."
+        fullName = "Julian Basco",
+        profession = "ReactJs Developer",
+        review = "Florence is a very diligent worker and team player. He would be a good fit for any position!",
     ),
 
     Fourth(
         image = Res.Image.avatar4,
-        fullName = "Daniel Olleres",
-        profession = "Multimedia Supervisor",
-        review =  "He demonstrated remarkable proficiency in crafting visual appealing mobile applications."
+        fullName = "Caroline Ignacio",
+        profession = "iOS Software Engineer",
+        review = "His technical skills and dedication to quality work make them a valuable asset to any team!",
     ),
-
     Fifth(
         image = Res.Image.avatar5,
-        fullName = "Ellen Grace Fabregas",
-        profession = "Business Analyst",
-        review =  "His collaboration and technical skills greatly contributed to our success."
+        fullName = "Raymart Entuna",
+        profession = "Sr. Dotnet  Developer",
+        review = "Brought a new level of expertise to our team. His dedication to creating seamless user experiences is unmatched.",
     ),
 
     Sixth(
         image = Res.Image.avatar6,
-        fullName = "Jennilyn Pagaran Aclag",
-        profession = "Technical Standard Engineer",
-        review =  "He ensured that projects adhered in to great technical standards. His commitment to excellence is truly commendable."
-    )
+        fullName = "Reynaleen Soriano",
+        profession = "CEO - Technation",
+        review = "His coding prowess and attention to detail ensured our mobile app exceeded expectations.",
+    ),
 }

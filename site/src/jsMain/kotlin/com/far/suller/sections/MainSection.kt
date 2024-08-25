@@ -35,6 +35,8 @@ import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import com.varabyte.kobweb.silk.theme.shapes.Circle
+import com.varabyte.kobweb.silk.theme.shapes.clip
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Button
@@ -110,7 +112,7 @@ private fun mainText(breakpoint: Breakpoint){
                 attrs = Modifier
                     .margin(topBottom = 0.px)
                     .fontFamily(FONT_FAMILY)
-                    .fontSize(if(breakpoint >= Breakpoint.LG)45.px else 20.px)
+                    .fontSize(if(breakpoint >= Breakpoint.LG)35.px else 20.px)
                     .fontWeight(FontWeight.Normal)
                     .color(Theme.Primary.rgb)
                     .toAttrs()
@@ -119,9 +121,8 @@ private fun mainText(breakpoint: Breakpoint){
             }
             P(
                 attrs = Modifier
-                    .margin(top = 20.px, bottom = 0.px)
                     .fontFamily(FONT_FAMILY)
-                    .fontSize(if(breakpoint >= Breakpoint.LG)68.px else 40.px)
+                    .fontSize(if(breakpoint >= Breakpoint.LG)48.px else 40.px)
                     .fontWeight(FontWeight.Bolder)
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
@@ -141,20 +142,23 @@ private fun mainText(breakpoint: Breakpoint){
                 Text(ROLE)
 
             }
-            P(
-                attrs = Modifier
-                    .margin(bottom = 25.px)
-                    .maxWidth(400.px)
-                    .fontFamily(FONT_FAMILY)
-                    .fontSize(15.px)
-                    .fontStyle(FontStyle.Italic)
-                    .fontWeight(FontWeight.Normal)
-                    .color(Theme.Secondary.rgb)
-                    .toAttrs()
-            ){
-                Text(MAIN_INTRO)
 
+            MAIN_INTRO.forEach { intro->
+                P(
+                    attrs = Modifier
+                        .margin(bottom = 25.px)
+                        .maxWidth(400.px)
+                        .fontFamily(FONT_FAMILY)
+                        .fontSize(15.px)
+                        .fontStyle(FontStyle.Italic)
+                        .fontWeight(FontWeight.Normal)
+                        .color(Theme.Secondary.rgb)
+                        .toAttrs()
+                ){
+                    Text(intro)
+                }
             }
+
             Button(
                 attrs = MainButtonStyle.toModifier()
                 .height(40.px)
@@ -185,7 +189,7 @@ private fun mainImage(){
     Column (modifier = Modifier.fillMaxSize(80.percent).fillMaxHeight(),
         verticalArrangement = Arrangement.Center) {
         Image(
-            modifier = MainImageStyle.toModifier().fillMaxWidth(),
+            modifier = MainImageStyle.toModifier().height(470.px).width(510.px).clip(Circle()),
             src = Res.Image.mainImage,
             desc = "Main Image"
         )

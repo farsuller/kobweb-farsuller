@@ -1,6 +1,7 @@
 package com.far.suller.models
 
 
+import com.far.suller.util.Constants.CURRENZY
 import com.far.suller.util.Constants.MCDELIVERY_LINK
 import com.far.suller.util.Constants.PARKINGBUDDY
 import com.far.suller.util.Constants.PUREGOLD
@@ -19,13 +20,19 @@ enum class Portfolio(
     val description:String,
     val link:String,
 ) {
+    Currenzy(
+        image = Res.Image.currenzy,
+        title = "Currenzy",
+        description = "\"Currenzy\" is a straightforward currency converter app that allows users to check live exchange rates " +
+                "and easily convert between different currencies with a simple, user-friendly interface.",
+        link = CURRENZY
+    ),
     SoloScape(
         image = Res.Image.soloscape,
         title = "SoloScape",
         description = "SoloScape - Version 1.0 \n" +
                 "Introducing the first version of my Jetpack Compose app, now live on the Play Store—a straightforward journal app.",
         link = SOLOSCAPE
-
     ),
     Solofolio(
         image = Res.Image.solofolio,
