@@ -6,6 +6,8 @@ object Constants {
     const val GOOGLE_DEVELOPER_LINK = "https://play.google.com/store/apps/dev?id=8531625098803100156"
     const val LINKEDIN_LINK = "https://www.linkedin.com/in/florence-arnold-suller-954b12164/"
 
+
+    const val ANIMELOOM = "https://play.google.com/store/apps/details?id=com.solodev.animeloom"
     const val CURRENZY = "https://play.google.com/store/apps/details?id=com.solodev.currenzy"
     const val SOLOFOLIO = "https://play.google.com/store/apps/details?id=com.portfolio.portfoliofs"
     const val SOLOSCAPE = "https://play.google.com/store/apps/details?id=com.soloscape.compose"
@@ -29,73 +31,73 @@ object Constants {
 
     const val ABOUT_ME = "I have worked on various Android projects, ranging from small-scale applications to large and complex ones. Well-versed in Android development tools, such as Android Studio, Gradle, and the Android SDK. Also have extensive experience in working with different APIs, including Google Maps, Firebase, and third-party APIs."
     val MAIN_INTRO = listOf(
-        "I offer more than 7 years of practical experience in Android development, having deployed multiple business apps on the market. My goal is to contribute or create apps based on company or client requirements, making an impact while continuously learning new trends and technologies that benefit clients or the company.",
-        "I am currently focused on building apps with Jetpack Compose and exploring Kotlin Multiplatform. I continually take courses to stay up-to-date with new trends in Android development.",
-        "As current Software Development Engineer, I utilize Jetpack Compose for UI, Kotlin for Android development, and Java for the core or server-side."
+        "Skilled and results-driven Android Developer with a talent for designing and coding diverse native and cross platform applications,ensuring comprehensive testing in line with client specifications.",
+        "With over 7 years in Android Development and had some exposure to other technologies.",
+        "I possess a robust background in development, design, testing, and deployment.",
+        "Alongside my expertise, I bring day-to-day exposure to teamwork and collaborative development."
     )
 
 
     const val NAME = "Florence Arnold R. Suller"
-    const val ROLE = "Current: Software Developer Engineer"
+    const val ROLE = "Current: Android Developer"
     const val HIRE_ME = "Hire Me"
     const val INTRO = "Hello I'm"
 
-    val FPT = listOf(
-        "▪ The technologies utilized include Android Development, Android Studio, Kotlin, Java, Jetpack Compose, Gradle, Bitbucket, and Modular projects.",
-        "▪ Attend daily stand-up meetings to discuss project progress and roadblocks.",
-        "▪ Adhere to Scrum framework principles and practices throughout the project lifecycle.",
+    val BCS = listOf(
+        "▪ The technologies utilized include Android Development, Android Studio, Kotlin, XML, MVVM, Version Control, Git,  Azure DevOps.",
+        "▪ Attend daily stand-up, planning and refinement to discuss project progress and roadblocks.",
+        "▪ Develop assigned tasks, provide pull requests for code reviews, in every sprint cycle.",
         "▪ Submit pull requests for each UI-related task assigned during the Sprint. Request testing and code reviews for every ticket.",
-        "▪ Conduct or create pull requests in server-side development in Java, whenever aside UI changes but need to work on core side.",
-        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders."
+        "▪ Collaborated with a cross-functional team, including product owner, team members, ensuring seamless communication and alignment to achieve assigned feature delivery.",
+    )
+
+    val FPT = listOf(
+        "▪ The technologies utilized include Android Development, Android Studio, Kotlin, Java, Jetpack Compose, Bitbucket, Confluence, Linux.",
+        "▪ Attend daily stand-up and planning to discuss project progress and roadblocks, sprint planning and refinements.",
+        "▪ Develop assigned tasks, provide pull requests and testing, in every sprint cycle.",
+        "▪ Review provided logs for investigation for crash issues and review UI Design for development.",
+        "▪ Run flash on a virtual device for development and testing via Linux.",
+        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
     )
 
     val COLLABERA = listOf(
-        "▪ The technologies utilized include Android SDK, Gradle, Kotlin, Java, XML, Jetpack Compose, REST API, Retrofit, Modular Projects, CLEAN, MVVM, Version Control Git, Unit Testing, CI/CD, Firebase, Gitlab.",
-        "▪ Engage in daily scrum meetings for real-time development updates, utilize Jira Kanban tickets to track project progress, and adhere to acceptance criteria for efficient task.",
-        "▪ Collaborated with a cross-functional team, including product owners, delivery leads, team leads, back-end developers, and UI/UX designers, ensuring seamless communication and alignment to achieve project goals.",
-        "▪ Proficient in utilizing dependency injection and modularizing features, adept at seamlessly integrating new API endpoints for enhanced application functionality.",
-        "▪ Submit pull requests for each UI-related task assigned during the Sprint. Request testing and code reviews for every ticket.",
-        "▪ Managed automated app distribution builds on Firebase to facilitate seamless QA testing processes, ensuring efficient and reliable software testing cycles.",
-        "▪ Successfully executed tasks in version control, automated unit testing, CI/CD processes, and product build delivery by adhering to provided documentation, contributing to an efficient and organized development workflow.",
-        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders."
+        "▪ The technologies utilized include Android SDK, Gradle, Kotlin, Java, XML, Api Integration, Retrofit, Modular Projects, CLEAN, MVVM, Version Control Git, Unit Testing, CI/CD, Firebase, Gitlab.",
+        "▪ Attend daily stand-up and planning to discuss project progress and roadblocks, sprint planning and refinements.",
+        "▪ Collaborated with a cross-functional team, including product owners, delivery leads, team leads, back-end developers, and UI/UX designers, ensuring seamless communication and alignment to achieve assigned feature delivery.",
+        "▪ Developed new features based on provided API requirements. Submit pull requests for each task assigned during the Sprint cycle.",
+        "▪ Utilized automated unit testing, CI/CD process and other tools and platforms to publish and  maintain then distribute the documentation.",
     )
 
     val YONDU = listOf(
-        "▪ The technologies utilized include Android SDK, Gradle, Kotlin, Java, XML, Retrofit, REST API, MVVM, Version Control Git, Firebase, Google Cloud Platform, Google Maps Integration, Gitlab.",
-        "▪ Followed Agile/Scrum methodologies in the work environment to ensure the delivery of high-quality applications.",
-        "▪ Participated in Daily Scrum Meetings and Jira Kanban tickets to keep track of progress.",
-        "▪ While a DevOps team member, I conducted investigations of bug tickets, analyzing reported issues to identify root causes and potential solutions.",
-        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
-        "▪ Spearheaded development, testing, publishing tasks, ensuring the app meets client requirements and collaborating with the team for successful publication.",
+        "▪ The technologies utilized include Android SDK, Gradle,  Kotlin, Java, XML, Retrofit, REST API,  MVVM, Version Control Git, Firebase, Google Cloud Platform, Google Maps Integration, Gitlab.",
+        "▪ Attend daily stand-up, planning and refinement on Jira Kanban tickets to keep track of progress.",
         "▪ Collaborated with the other platform developers, UI/UX Designer, QA Team, Business Analyst, and Scrum Master to align development efforts seamlessly.",
+        "▪ Maintained internal client multiple apps and conducted investigations of bug tickets, analyzing reported issues to identify root causes and potential solutions.",
+        "▪ Developed and delivered new multiple features based on project tasks deliveries and API requirements.",
+        "▪ Take lead and conduct knowledge transfer, task ticket features deliveries on other developers.",
         "▪ Delivered the requirements for Vulnerability Assessment and Penetration Testing from 3rd Party.",
-        "▪ Utilized Firebase Crashlytics, Remote Configuration, App Distribution.",
-        "▪ Conducted initial technical interviews for potential Android developer applicants."
+        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
     )
 
     val EMAPTA = listOf(
-        "▪ The technologies utilized include Android SDK, Gradle, Kotlin, XML, 3rd Party Api Integrations, Analytics, Xcode, Objective-C, Bitbucket, MVP, Version Control Git.",
-        "▪ Participated in Daily Scrum Meetings and Jira Kanban tickets to keep track of progress.",
+        "▪ The technologies utilized include Android SDK, Gradle, Kotlin, XML, 3rd Party Api Integrations, Analytics, Xcode, Objective-C, Bitbucket, MVVM, Version Control, Git.",
+        "▪ Attend daily stand-up, planning and refinement on Jira Kanban tickets to keep track of progress.",
         "▪ Provided support for publishing credentials for the Play Store and App Store to other developers leading the development of a browser and video conference app.",
-        "▪ Collaborated with the overseas developer to facilitate the submission and approval process on both platforms.",
-        "▪ Monitored the status of the app submissions, addressing any feedback or concerns raised by the Play Store and App Store review teams.",
-        "▪ Collaborated with team members to identify and address any issues or bugs found during testing.",
-        "▪ Participated in regression testing to ensure that existing features remain unaffected by new changes.",
-        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders."
-    )
+        "▪ Provided support to developers to provide other requirements tasks, and also by managing credentials for app uploads, and I oversee app publishing on both the Play Store and the App Store.",
+        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.\n",
+
+        )
+
     val ZIGZAG = listOf(
-        "▪ The technologies utilized include Android SDK, Gradle, Kotlin, Java, XML, Version Control Git, MVVM, Api Integrations, Analytics, Xcode, Objective-C, Unity, C#, Flutter, Dart, Bitbucket.",
-        "▪ Worked in an Agile/Scrum environment to deliver high-quality software.",
+        "▪ The technologies utilized include Android SDK, Gradle, Kotlin, Java, XML, Version Control, Git, MVVM, Api Integrations, Analytics, Xcode, Objective-C, Unity, C#, Flutter,  Dart, Bitbucket.",
         "▪ Collaborated with platform developers, UI/UX Designer, QA Team, Product Manager, and Scrum Master to align development efforts seamlessly.",
-        "▪ Participated in Daily Scrum Meetings and Jira Kanban tickets to track progress.",
-        "▪ Tasked for data gathering, created automated scripts to scrape data.",
-        "▪ Task to do code update and code review and demo before publishing that adheres to the regulations on PlayStore.",
-        "▪ Tasked to do integration of third-party advertising, analytics, and ads integration.",
+        "▪ Attend daily stand-up, planning and refinement on Jira Kanban tickets to track progress.",
+        "▪ Tasked for data gathering, developed automated scripts to scrape data.",
         "▪ Tasked to do a MVP app using flutter.",
-        "▪ Tasked to work on a cross platform project, about casual games in Unity, conduct Ads Integration (Admob, IronSource, Unity Ads) and publish on both the Play Store and the App Store.",
+        "▪ Developed updates integrating third-party advertising, analytics, and fixes on existing android apps on the Play Store.",
+        "▪ Developed new Ads Integration for casual games both Android and iOS.",
         "▪ Actively participated in company meetings and seminars to stay updated on organizational goals, projects, and industry trends.",
-        "▪ Engaged in outdoor activities organized by the company to foster team building, morale, and employee well-being.",
-        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders."
+        "▪ Utilized appropriate tools and platforms to maintain and distribute the documentation effectively within the team and to relevant stakeholders.",
     )
 
 }
@@ -106,6 +108,7 @@ object Res {
         const val logo = "logo.svg"
         const val mainImage = "main_image.png"
         const val aboutImage = "about_image.png"
+        const val animeloom = "animeloom.png"
         const val currenzy = "currenzy.png"
         const val soloscape = "portfolio1.png"
         const val solofolio = "solofolio.jpg"
@@ -131,6 +134,13 @@ object Res {
         const val avatar4 = "avatar4.png"
         const val avatar5 = "avatar5.png"
         const val avatar6 = "avatar6.png"
+
+        const val WORK_1 = "work_zigzag_logo.jpg"
+        const val WORK_2 = "work_emapta_logo.jpg"
+        const val WORK_3 = "work_yondu_logo.jpg"
+        const val WORK_4 = "work_collabera_digital_logo.jpg"
+        const val WORK_5 = "work_fpt_software_logo.jpg"
+        const val WORK_6 = "work_bcs_logo.jpg"
     }
 
     object Icon {

@@ -2,7 +2,7 @@ package com.far.suller.sections
 
 import androidx.compose.runtime.*
 import com.far.suller.components.sectionTitle
-import com.far.suller.components.SkillBar
+import com.far.suller.components.skillBar
 import com.far.suller.models.Section
 import com.far.suller.models.MeRate
 import com.far.suller.models.Theme
@@ -131,7 +131,7 @@ private fun aboutMe(){
             Text(ABOUT_ME)
         }
         MeRate.values().forEach { skill ->
-            SkillBar(
+            skillBar(
                 name = skill.title,
                 index = skill.ordinal,
                 percentage = if(viewPortEntered) skill.percentage else 0.percent,

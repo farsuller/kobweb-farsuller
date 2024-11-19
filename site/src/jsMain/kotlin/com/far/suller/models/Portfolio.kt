@@ -1,6 +1,7 @@
 package com.far.suller.models
 
 
+import com.far.suller.util.Constants.ANIMELOOM
 import com.far.suller.util.Constants.CURRENZY
 import com.far.suller.util.Constants.MCDELIVERY_LINK
 import com.far.suller.util.Constants.PARKINGBUDDY
@@ -15,11 +16,17 @@ import com.far.suller.util.Res
 
 
 enum class Portfolio(
-    val image:String,
-    val title:String,
-    val description:String,
-    val link:String,
+    val image: String,
+    val title: String,
+    val description: String,
+    val link: String,
 ) {
+    AnimeLoom(
+        image = Res.Image.animeloom,
+        title = "AnimeLoom",
+        description = "AnimeLoom delivers a seamless experience for anime and manga lovers, offering comprehensive details, summaries, and insights on your favorite series. Explore, bookmark, and stay updated with ease",
+        link = ANIMELOOM,
+    ),
     Currenzy(
         image = Res.Image.currenzy,
         title = "Currenzy",
@@ -142,5 +149,4 @@ enum class Portfolio(
         description = "No more available publicly, worked on this during my tenure at the previous company. Our team delved into game re-skinning and enhanced features across various platforms.",
         link = ""
     ),
-
 }

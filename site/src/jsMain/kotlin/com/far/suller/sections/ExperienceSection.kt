@@ -61,7 +61,7 @@ private fun experienceContent(){
         Experience.values().reversed().forEach { experience ->
             experienceCard(
                 breakpoint = breakpoint,
-                active = experience == Experience.Fifth,
+                active = experience == Experience.Sixth,
                 experience = experience,
                 animatedMargin = animatedMargin
             )
