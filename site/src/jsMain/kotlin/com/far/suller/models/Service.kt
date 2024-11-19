@@ -10,7 +10,7 @@ import com.far.suller.util.Res
 
 
 enum class Service(
-    val icon:String,
+    val icon: String,
     val imageDesc: String,
     val title: String,
     val description: String

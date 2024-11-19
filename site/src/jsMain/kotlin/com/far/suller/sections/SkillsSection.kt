@@ -1,12 +1,9 @@
 package com.far.suller.sections
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import com.far.suller.components.sectionTitle
-import com.far.suller.components.serviceCard
 import com.far.suller.components.skillsCard
 import com.far.suller.models.Section
-import com.far.suller.models.Service
 import com.far.suller.models.Skills
 import com.far.suller.util.Constants.SECTION_WIDTH
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -16,13 +13,13 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun skillsSection(){
+fun skillsSection() {
     Box(
         modifier = Modifier
             .id(Section.Skills.id)
@@ -35,21 +32,24 @@ fun skillsSection(){
 }
 
 @Composable
-private fun sectionContent(){
-    val breakpoint by rememberBreakpoint()
+private fun sectionContent() {
+    val breakpoint = rememberBreakpoint()
 
     Column(
         modifier = Modifier
             .fillMaxWidth(
-                if(breakpoint >= Breakpoint.MD) 100.percent
-                else 90.percent),
+                if (breakpoint >= Breakpoint.MD) 100.percent
+                else 90.percent
+            ),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        sectionTitle(modifier = Modifier.fillMaxWidth().margin(bottom = 20.px),
+        sectionTitle(
+            modifier = Modifier.fillMaxWidth().margin(bottom = 20.px),
             section = Section.Skills,
-            alignment = Alignment.CenterHorizontally)
-        SimpleGrid(numColumns = numColumns(base = 1, sm = 2, md = 4)){
-            Skills.values().forEach { skills ->
+            alignment = Alignment.CenterHorizontally
+        )
+        SimpleGrid(numColumns = numColumns(base = 1, sm = 2, md = 4)) {
+            Skills.entries.forEach { skills ->
                 skillsCard(skills = skills)
             }
         }

@@ -1,4 +1,5 @@
 package com.far.suller.sections
+
 import androidx.compose.runtime.*
 import com.far.suller.components.sectionTitle
 import com.far.suller.components.testimonialCard
@@ -6,8 +7,8 @@ import com.far.suller.models.Section
 import com.far.suller.models.Testimonial
 import com.far.suller.models.Theme
 import com.far.suller.util.Constants.SECTION_WIDTH
-import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.css.Visibility
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -18,7 +19,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.*
 
@@ -37,7 +38,7 @@ fun testimonialSection() {
 
 @Composable
 private fun testimonialContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     var selectedPage by remember { mutableStateOf(0) }
     Column(
         modifier = Modifier
@@ -104,8 +105,13 @@ private fun testimonialCards(
                             )
                         )
                         .transition(
-                            CSSTransition(property = "visibility", duration = 300.ms),
-                            CSSTransition(property = "opacity", duration = 300.ms)
+                            Transition.of(
+                                property = "visibility",
+                                duration = 300.ms,
+                                timingFunction = null,
+                                delay = null
+                            ),
+                            Transition.of(property = "opacity", duration = 300.ms, timingFunction = null, delay = null)
                         ),
                     testimonial = testimonial,
                     breakpoint = breakpoint
@@ -133,8 +139,13 @@ private fun testimonialCards(
                             )
                         )
                         .transition(
-                            CSSTransition(property = "visibility", duration = 300.ms),
-                            CSSTransition(property = "opacity", duration = 300.ms)
+                            Transition.of(
+                                property = "visibility",
+                                duration = 300.ms,
+                                timingFunction = null,
+                                delay = null
+                            ),
+                            Transition.of(property = "opacity", duration = 300.ms, timingFunction = null, delay = null)
                         ),
                     testimonial = testimonial,
                     breakpoint = breakpoint

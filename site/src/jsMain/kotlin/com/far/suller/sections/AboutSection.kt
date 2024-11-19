@@ -2,7 +2,7 @@ package com.far.suller.sections
 
 import androidx.compose.runtime.*
 import com.far.suller.components.sectionTitle
-import com.far.suller.components.SkillBar
+import com.far.suller.components.skillBar
 import com.far.suller.models.Section
 import com.far.suller.models.MeRate
 import com.far.suller.models.Theme
@@ -11,7 +11,7 @@ import com.far.suller.styles.AboutTextStyle
 import com.far.suller.util.Constants
 import com.far.suller.util.Constants.ABOUT_ME
 import com.far.suller.util.Constants.SECTION_WIDTH
-import com.far.suller.util.ObserverViewPortEntered
+import com.far.suller.util.observerViewPortEntered
 import com.far.suller.util.Res
 import com.far.suller.util.animateNumbers
 import com.varabyte.kobweb.compose.css.FontStyle
@@ -26,8 +26,8 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.percent
@@ -50,7 +50,7 @@ fun aboutSection(){
 
 @Composable
 private fun aboutContent(){
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
 
     Column(
         modifier = Modifier
@@ -86,7 +86,6 @@ private fun aboutImage(){
         Image(
             modifier = AboutImageStyle.toModifier().fillMaxWidth(80.percent),
             src = Res.Image.aboutImage,
-            desc = "About Image"
         )
     }
 }
@@ -96,12 +95,12 @@ private fun aboutMe(){
     var viewPortEntered by remember { mutableStateOf(false) }
     val animatedPercentage = remember { mutableStateListOf(0,0,0,0,0) }
 
-    ObserverViewPortEntered(
+    observerViewPortEntered(
         sectionId = Section.About.id,
         distanceFromTop = 200.0,
         onViewPortEntered = {
             viewPortEntered = true
-            MeRate.values().forEach { skill ->
+            MeRate.entries.forEach { skill ->
                 scope.launch{
                     animateNumbers(
                         number = skill.percentage.value.toInt(),
@@ -131,7 +130,7 @@ private fun aboutMe(){
             Text(ABOUT_ME)
         }
         MeRate.values().forEach { skill ->
-            SkillBar(
+            skillBar(
                 name = skill.title,
                 index = skill.ordinal,
                 percentage = if(viewPortEntered) skill.percentage else 0.percent,

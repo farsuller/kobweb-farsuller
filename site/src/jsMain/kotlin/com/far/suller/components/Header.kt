@@ -19,8 +19,9 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.fa.FaBars
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -29,7 +30,7 @@ import org.jetbrains.compose.web.css.px
 @Composable
 fun header(onMenuClicked: ()-> Unit){
 
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
 
     Row (modifier = Modifier
         .fillMaxWidth(if(breakpoint > Breakpoint.MD) 80.percent else 90.percent)
@@ -63,7 +64,6 @@ fun leftSide(breakpoint: Breakpoint,
         Image(
             modifier = LogoStyle.toModifier(),
             src = Res.Image.logo,
-            desc ="Logo Image"
         )
     }
 }

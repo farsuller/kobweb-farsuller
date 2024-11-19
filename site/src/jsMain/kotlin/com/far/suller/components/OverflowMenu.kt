@@ -6,6 +6,7 @@ import com.far.suller.styles.NavigationItemStyle
 import com.far.suller.util.Constants.FONT_FAMILY
 import com.far.suller.util.Res
 import com.varabyte.kobweb.compose.css.*
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -18,25 +19,25 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.fa.FaXmark
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.*
 
 @Composable
-fun overflowMenu(onMenuClosed: ()-> Unit){
+fun overflowMenu(onMenuClosed: () -> Unit) {
     val scope = rememberCoroutineScope()
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     var translateX by remember { mutableStateOf((-100).percent) }
     var opacity by remember { mutableStateOf((0).percent) }
 
 
-    LaunchedEffect(breakpoint){
+    LaunchedEffect(breakpoint) {
         translateX = 0.percent
         opacity = 100.percent
-        if (breakpoint > Breakpoint.MD){
+        if (breakpoint > Breakpoint.MD) {
             scope.launch {
                 translateX = (-100).percent
                 opacity = 0.percent
@@ -46,31 +47,42 @@ fun overflowMenu(onMenuClosed: ()-> Unit){
         }
     }
 
-    Column (modifier = Modifier
-        .fillMaxWidth()
-        .height(100.vh)
-        .position(Position.Fixed)
-        .zIndex(2)
-        .opacity(opacity)
-        .backgroundColor(argb (a = 0.5f, r = 0.0f, g = 0.0f, b = 0.0f))
-        .transition(CSSTransition(property = "opacity", duration = 500.ms))
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(100.vh)
+            .position(Position.Fixed)
+            .zIndex(2)
+            .opacity(opacity)
+            .backgroundColor(argb(a = 0.5f, r = 0.0f, g = 0.0f, b = 0.0f))
+            .transition(Transition.of(property = "opacity", duration = 500.ms, timingFunction = null, delay = null))
     ) {
-        Column (
+        Column(
             modifier = Modifier
                 .fillMaxHeight()
-                .padding(all= 25.px)
+                .padding(all = 25.px)
                 .width(
-                    if(breakpoint < Breakpoint.MD) 50.percent
-                    else 25.percent)
+                    if (breakpoint < Breakpoint.MD) 50.percent
+                    else 25.percent
+                )
                 .overflow(Overflow.Auto)
                 .scrollBehavior(ScrollBehavior.Smooth)
                 .backgroundColor(Colors.White)
                 .translateX(tx = translateX)
-                .transition(CSSTransition(property = "translate", duration = 500.ms))
-        ){
-            Row(modifier = Modifier
-                .margin(bottom = 25.px),
-                verticalAlignment = Alignment.CenterVertically)
+                .transition(
+                    Transition.of(
+                        property = "translate",
+                        duration = 500.ms,
+                        timingFunction = null,
+                        delay = null
+                    )
+                )
+        ) {
+            Row(
+                modifier = Modifier
+                    .margin(bottom = 25.px),
+                verticalAlignment = Alignment.CenterVertically
+            )
             {
                 FaXmark(
                     modifier = Modifier
@@ -89,10 +101,9 @@ fun overflowMenu(onMenuClosed: ()-> Unit){
                 Image(
                     modifier = Modifier.size(80.px),
                     src = Res.Image.logo,
-                    desc = "Logo Image"
                 )
             }
-            Section.values().take(6).forEach { section ->
+            Section.entries.toTypedArray().take(6).forEach { section ->
                 Link(
                     modifier = NavigationItemStyle.toModifier()
                         .margin(bottom = 10.px)
@@ -101,12 +112,12 @@ fun overflowMenu(onMenuClosed: ()-> Unit){
                         .fontWeight(FontWeight.Normal)
                         .textDecorationLine(TextDecorationLine.None)
                         .onClick {
-                                 scope.launch {
-                                     translateX = (-100).percent
-                                     opacity = 0.percent
-                                     delay(500)
-                                     onMenuClosed()
-                                 }
+                            scope.launch {
+                                translateX = (-100).percent
+                                opacity = 0.percent
+                                delay(500)
+                                onMenuClosed()
+                            }
                         },
                     path = section.path,
                     text = section.title,

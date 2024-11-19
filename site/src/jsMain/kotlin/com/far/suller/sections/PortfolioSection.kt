@@ -21,8 +21,8 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.icons.fa.FaArrowLeft
 import com.varabyte.kobweb.silk.components.icons.fa.FaArrowRight
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import org.jetbrains.compose.web.css.percent
@@ -43,7 +43,7 @@ fun portfolioSection(){
 
 @Composable
 private fun portfolioContent(){
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
 
     Column(
         modifier = Modifier
@@ -75,7 +75,7 @@ private fun portfolioCards(breakpoint: Breakpoint){
         .scrollBehavior(ScrollBehavior.Smooth)
     )
     {
-        Portfolio.values().forEach { portfolio ->
+        Portfolio.entries.forEach { portfolio ->
             portfolioCard(
                 modifier = Modifier
                     .margin(
@@ -83,7 +83,6 @@ private fun portfolioCards(breakpoint: Breakpoint){
                         else 0.px),
                 portfolio = portfolio,
                 link = portfolio.link
-
             )
         }
     }

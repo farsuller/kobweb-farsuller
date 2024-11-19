@@ -6,7 +6,7 @@ import com.far.suller.models.Achievements
 import com.far.suller.models.Section
 import com.far.suller.models.Theme
 import com.far.suller.util.Constants.SECTION_WIDTH
-import com.far.suller.util.ObserverViewPortEntered
+import com.far.suller.util.observerViewPortEntered
 import com.far.suller.util.animateNumbers
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -14,14 +14,14 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.px
 
 @Composable
 fun achievementSection(){
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Box(
         modifier = Modifier
             .id(Section.Achievements.id)
@@ -41,12 +41,12 @@ private fun achievementContent(breakpoint: Breakpoint){
     var viewPortEntered by remember { mutableStateOf(false) }
     val animatedNumbers = remember { mutableStateListOf(0,0,0,0) }
 
-    ObserverViewPortEntered(
+    observerViewPortEntered(
         sectionId = Section.Achievements.id,
         distanceFromTop = 700.0,
         onViewPortEntered = {
             viewPortEntered = true
-            Achievements.values().forEach { achievements ->
+            Achievements.entries.forEach { achievements ->
                 scope.launch {
                     animateNumbers(
                         number = achievements.number,
@@ -60,7 +60,7 @@ private fun achievementContent(breakpoint: Breakpoint){
     )
 
    SimpleGrid(numColumns = numColumns(base = 1, md = 2, lg = 4)){
-       Achievements.values().forEach { achievements ->
+       Achievements.entries.forEach { achievements ->
            achievementCard(
                modifier = Modifier.margin(
                    right = if(achievements == Achievements.Team) 0.px

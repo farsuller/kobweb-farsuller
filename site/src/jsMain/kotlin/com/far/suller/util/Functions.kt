@@ -7,7 +7,7 @@ import kotlinx.coroutines.delay
 import org.w3c.dom.events.EventListener
 
 @Composable
-fun ObserverViewPortEntered(
+fun observerViewPortEntered(
     sectionId:String,
     distanceFromTop: Double,
     onViewPortEntered: () -> Unit

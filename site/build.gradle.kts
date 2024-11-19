@@ -2,13 +2,11 @@ import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
 import kotlinx.html.script
 
-
-@Suppress("DSL_SCOPE_VIOLATION") // https://youtrack.jetbrains.com/issue/KTIJ-19369
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kobweb.application)
-  //  alias(libs.plugins.kobwebx.markdown)
+    alias(libs.plugins.kobwebx.markdown)
 }
 
 group = "com.far.suller"
@@ -35,22 +33,20 @@ kobweb {
 
 kotlin {
     configAsKobwebApplication("landing")
- //   jvmToolchain(11) // Kobweb server should use at least Java 11
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                implementation(compose.runtime)
-            }
+        commonMain.dependencies {
+            implementation(libs.compose.runtime)
         }
 
-        val jsMain by getting {
+        jsMain.dependencies {
             dependencies {
-                implementation(compose.web.core)
+                implementation(libs.compose.html.core)
                 implementation(libs.kobweb.core)
-                implementation(libs.kobweb.silk.core)
-                implementation(libs.kobweb.silk.icons.fa)
-             //   implementation(libs.kobwebx.markdown)
+                implementation(libs.kobweb.silk)
+                implementation(libs.silk.icons.fa)
+                implementation(libs.silk.icons.mdi)
+                implementation(libs.kobwebx.markdown)
              }
         }
 //        val jvmMain by getting {

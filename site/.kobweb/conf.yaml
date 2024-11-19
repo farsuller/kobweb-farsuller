@@ -11,4 +11,4 @@ server:
       script: "build/distributions/landing.js"
       siteRoot: ".kobweb/site"
 
-  port: 8080
+  port: 8082

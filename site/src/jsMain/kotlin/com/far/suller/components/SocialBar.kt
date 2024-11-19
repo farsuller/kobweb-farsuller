@@ -16,7 +16,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.icons.fa.*
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.px
 
 
@@ -58,6 +58,7 @@ private fun socialLinks(row: Boolean = false) {
         path = LINKEDIN_LINK,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
+
         FaLinkedin(
             modifier = SocialLinksStyle
                 .toModifier()
