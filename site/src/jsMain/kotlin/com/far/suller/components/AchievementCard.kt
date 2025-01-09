@@ -23,16 +23,17 @@ fun achievementCard(
     modifier: Modifier = Modifier,
     animatedNumber: Int,
     achievements: Achievements
-){
+) {
 
-    Row(modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically){
+    Row(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         Image(
             modifier = Modifier
                 .size(70.px)
                 .margin(right = 20.px),
             src = achievements.icon,
-            desc = "Achievement Icon"
         )
         Column {
             P(
@@ -44,10 +45,11 @@ fun achievementCard(
                     .fontWeight(FontWeight.Bolder)
                     .color(Theme.Primary.rgb)
                     .toAttrs()
-            ){
+            ) {
                 Text(
-                    if(achievements == Achievements.Completed) "$animatedNumber+"
-                    else "$animatedNumber")
+                    if (achievements == Achievements.Completed) "$animatedNumber+"
+                    else "$animatedNumber"
+                )
             }
             P(
                 attrs = Modifier
@@ -59,7 +61,7 @@ fun achievementCard(
                     .color(Theme.Secondary.rgb)
                     .opacity(50.percent)
                     .toAttrs()
-            ){
+            ) {
                 Text(achievements.description)
             }
         }

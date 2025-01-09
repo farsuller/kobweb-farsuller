@@ -1,7 +1,6 @@
 package com.far.suller.sections
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import com.far.suller.components.portfolioCard
 import com.far.suller.components.sectionTitle
 import com.far.suller.models.Portfolio
@@ -21,15 +20,15 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.icons.fa.FaArrowLeft
 import com.varabyte.kobweb.silk.components.icons.fa.FaArrowRight
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun portfolioSection(){
+fun portfolioSection() {
     Box(
         modifier = Modifier
             .id(Section.Portfolio.id)
@@ -42,14 +41,15 @@ fun portfolioSection(){
 }
 
 @Composable
-private fun portfolioContent(){
-    val breakpoint by rememberBreakpoint()
+private fun portfolioContent() {
+    val breakpoint = rememberBreakpoint()
 
     Column(
         modifier = Modifier
             .fillMaxWidth(
-                if(breakpoint >= Breakpoint.MD) 100.percent
-                else 90.percent),
+                if (breakpoint >= Breakpoint.MD) 100.percent
+                else 90.percent
+            ),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         sectionTitle(
@@ -62,25 +62,28 @@ private fun portfolioContent(){
 }
 
 @Composable
-private fun portfolioCards(breakpoint: Breakpoint){
-    Row(modifier = Modifier
-        .id("scrollableContainer")
-        .fillMaxWidth()
-        .margin(bottom = 25.px)
-        .maxWidth(
-            if(breakpoint > Breakpoint.MD) 950.px
-            else if (breakpoint > Breakpoint.SM) 625.px
-            else 300.px)
-        .overflow(Overflow.Hidden)
-        .scrollBehavior(ScrollBehavior.Smooth)
+private fun portfolioCards(breakpoint: Breakpoint) {
+    Row(
+        modifier = Modifier
+            .id("scrollableContainer")
+            .fillMaxWidth()
+            .margin(bottom = 25.px)
+            .maxWidth(
+                if (breakpoint > Breakpoint.MD) 950.px
+                else if (breakpoint > Breakpoint.SM) 625.px
+                else 300.px
+            )
+            .overflow(Overflow.Hidden)
+            .scrollBehavior(ScrollBehavior.Smooth)
     )
     {
         Portfolio.values().forEach { portfolio ->
             portfolioCard(
                 modifier = Modifier
                     .margin(
-                        right = if( portfolio!= Portfolio.EarDoctor) 25.px
-                        else 0.px),
+                        right = if (portfolio != Portfolio.EarDoctor) 25.px
+                        else 0.px
+                    ),
                 portfolio = portfolio,
                 link = portfolio.link
 
@@ -90,10 +93,12 @@ private fun portfolioCards(breakpoint: Breakpoint){
 }
 
 @Composable
-private fun portfolioNavigation(){
+private fun portfolioNavigation() {
 
-    Row(modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.Center) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center
+    ) {
 
         FaArrowLeft(
             modifier = PortfolioArrowIconStyle.toModifier()
@@ -110,8 +115,8 @@ private fun portfolioNavigation(){
             modifier = PortfolioArrowIconStyle.toModifier()
                 .cursor(Cursor.Pointer)
                 .onClick {
-                         document.getElementById("scrollableContainer")
-                             ?.scrollBy(x = 325.0, y = 0.0)
+                    document.getElementById("scrollableContainer")
+                        ?.scrollBy(x = 325.0, y = 0.0)
                 },
             size = IconSize.LG
         )

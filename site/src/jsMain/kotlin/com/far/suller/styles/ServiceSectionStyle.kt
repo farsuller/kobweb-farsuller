@@ -1,56 +1,58 @@
 package com.far.suller.styles
 
 import com.far.suller.models.Theme
-import com.varabyte.kobweb.compose.css.CSSTransition
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.transition
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.hover
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.selectors.hover
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
 
-val ServiceSectionStyle by ComponentStyle {
+val ServiceSectionStyle = CssStyle {
     base {
         Modifier.border(
             width = 2.px,
             style = LineStyle.Solid,
-            color = Theme.LighterGray.rgb)
+            color = Theme.LighterGray.rgb
+        )
             .backgroundColor(Colors.White)
             .transition(
-                CSSTransition(property = "border", duration = 200.ms),
-                CSSTransition(property = "background", duration = 200.ms)
+                Transition.of(property = "border", duration = 200.ms),
+                Transition.of(property = "background", duration = 200.ms)
             )
     }
-    hover{
+    hover {
         Modifier.border(
             width = 2.px,
             style = LineStyle.Solid,
-            color = Theme.Primary.rgb)
+            color = Theme.Primary.rgb
+        )
             .backgroundColor(Theme.Primary.rgb)
     }
-    cssRule(" > #iconBox"){
+    cssRule(" > #iconBox") {
         Modifier.backgroundColor(Colors.Transparent)
             .transition(
-                CSSTransition(property = "background", duration = 200.ms)
+                Transition.of(property = "background", duration = 200.ms)
             )
     }
-    cssRule(":hover > #iconBox"){
+    cssRule(":hover > #iconBox") {
         Modifier.backgroundColor(Colors.White)
     }
 
-    cssRule(" > p"){
+    cssRule(" > p") {
         Modifier
             .color(Theme.Secondary.rgb)
             .transition(
-                CSSTransition(property = "color", duration = 200.ms)
+                Transition.of(property = "color", duration = 200.ms)
             )
     }
-    cssRule(":hover > p"){
+    cssRule(":hover > p") {
         Modifier
             .color(Colors.White)
     }
