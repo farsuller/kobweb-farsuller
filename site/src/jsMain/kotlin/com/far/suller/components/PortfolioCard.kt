@@ -19,7 +19,7 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
@@ -30,12 +30,12 @@ fun portfolioCard(
     modifier: Modifier = Modifier,
     portfolio: Portfolio,
     link: String
-){
+) {
     Link(
         modifier = PortfolioSectionStyle.toModifier().textDecorationLine(TextDecorationLine.None),
         path = link,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
-    ){
+    ) {
         Column(modifier = modifier.id("columnParent")) {
             Box(
                 modifier = Modifier
@@ -43,27 +43,25 @@ fun portfolioCard(
                     .fillMaxWidth()
                     .maxWidth(300.px)
                     .margin(bottom = 20.px),
-            ){
+            ) {
                 Image(
                     modifier = Modifier
                         .size(300.px)
                         .objectFit(ObjectFit.Cover),
                     src = portfolio.image,
-                    desc = portfolio.description
                 )
                 Box(
                     modifier = Modifier
                         .id("greenOverlay")
                         .fillMaxHeight()
-                        .backgroundColor(argb(a= 0.5f,r = 39, g = 70, b = 135)),
+                        .backgroundColor(argb(a = 0.5f, r = 39, g = 70, b = 135)),
                     contentAlignment = Alignment.Center
-                ){
+                ) {
                     Image(
                         modifier = Modifier
                             .id("linkIcon")
                             .size(32.px),
                         src = Res.Icon.link_icon,
-                        desc = "Link Icon"
                     )
                 }
             }
@@ -76,7 +74,7 @@ fun portfolioCard(
                     .fontWeight(FontWeight.Bold)
 
                     .toAttrs()
-            ){
+            ) {
                 Text(portfolio.title)
             }
             P(
@@ -89,7 +87,7 @@ fun portfolioCard(
                     .color(Theme.Secondary.rgb)
                     .opacity(50.percent)
                     .toAttrs()
-            ){
+            ) {
                 Text(portfolio.description)
             }
         }

@@ -3,15 +3,15 @@ package com.far.suller.sections
 import androidx.compose.runtime.*
 import com.far.suller.components.sectionTitle
 import com.far.suller.components.skillBar
-import com.far.suller.models.Section
 import com.far.suller.models.MeRate
+import com.far.suller.models.Section
 import com.far.suller.models.Theme
 import com.far.suller.styles.AboutImageStyle
 import com.far.suller.styles.AboutTextStyle
 import com.far.suller.util.Constants
 import com.far.suller.util.Constants.ABOUT_ME
 import com.far.suller.util.Constants.SECTION_WIDTH
-import com.far.suller.util.ObserverViewPortEntered
+import com.far.suller.util.observerViewPortEntered
 import com.far.suller.util.Res
 import com.far.suller.util.animateNumbers
 import com.varabyte.kobweb.compose.css.FontStyle
@@ -26,8 +26,8 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.percent
@@ -36,7 +36,7 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
-fun aboutSection(){
+fun aboutSection() {
     Box(
         modifier = Modifier
             .id(Section.About.id)
@@ -49,26 +49,28 @@ fun aboutSection(){
 }
 
 @Composable
-private fun aboutContent(){
-    val breakpoint by rememberBreakpoint()
+private fun aboutContent() {
+    val breakpoint = rememberBreakpoint()
 
     Column(
         modifier = Modifier
             .fillMaxWidth(
-                if(breakpoint >= Breakpoint.MD) 100.percent
-                else 90.percent)
+                if (breakpoint >= Breakpoint.MD) 100.percent
+                else 90.percent
+            )
             .maxWidth(1200.px),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
         SimpleGrid(
-            modifier= Modifier.fillMaxWidth(
-                if(breakpoint >= Breakpoint.MD) 90.percent
+            modifier = Modifier.fillMaxWidth(
+                if (breakpoint >= Breakpoint.MD) 90.percent
                 else 100.percent
             ),
-            numColumns = numColumns(base = 1 , md = 2))
+            numColumns = numColumns(base = 1, md = 2)
+        )
         {
-            if(breakpoint >= Breakpoint.MD){
+            if (breakpoint >= Breakpoint.MD) {
                 aboutImage()
             }
             aboutMe()
@@ -78,7 +80,7 @@ private fun aboutContent(){
 }
 
 @Composable
-private fun aboutImage(){
+private fun aboutImage() {
     Box(
         modifier = Modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center
@@ -86,35 +88,38 @@ private fun aboutImage(){
         Image(
             modifier = AboutImageStyle.toModifier().fillMaxWidth(80.percent),
             src = Res.Image.aboutImage,
-            desc = "About Image"
         )
     }
 }
+
 @Composable
-private fun aboutMe(){
+private fun aboutMe() {
     val scope = rememberCoroutineScope()
     var viewPortEntered by remember { mutableStateOf(false) }
-    val animatedPercentage = remember { mutableStateListOf(0,0,0,0,0) }
+    val animatedPercentage = remember { mutableStateListOf(0, 0, 0, 0, 0) }
 
-    ObserverViewPortEntered(
+    observerViewPortEntered(
         sectionId = Section.About.id,
         distanceFromTop = 200.0,
         onViewPortEntered = {
             viewPortEntered = true
             MeRate.values().forEach { skill ->
-                scope.launch{
+                scope.launch {
                     animateNumbers(
                         number = skill.percentage.value.toInt(),
                         onUpdate = {
-                            animatedPercentage[skill.ordinal] = it                        }
+                            animatedPercentage[skill.ordinal] = it
+                        }
                     )
                 }
             }
         }
     )
 
-    Column(modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.Center) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.Center
+    ) {
 
         sectionTitle(section = Section.About)
         P(
@@ -127,15 +132,15 @@ private fun aboutMe(){
                 .fontStyle(FontStyle.Italic)
                 .color(Theme.Secondary.rgb)
                 .toAttrs()
-        ){
+        ) {
             Text(ABOUT_ME)
         }
         MeRate.values().forEach { skill ->
             skillBar(
                 name = skill.title,
                 index = skill.ordinal,
-                percentage = if(viewPortEntered) skill.percentage else 0.percent,
-                animatedPercentage = if(viewPortEntered) animatedPercentage[skill.ordinal] else 0
+                percentage = if (viewPortEntered) skill.percentage else 0.percent,
+                animatedPercentage = if (viewPortEntered) animatedPercentage[skill.ordinal] else 0
             )
         }
     }

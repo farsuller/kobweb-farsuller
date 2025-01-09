@@ -1,4 +1,5 @@
 package com.far.suller.sections
+
 import androidx.compose.runtime.*
 import com.far.suller.components.sectionTitle
 import com.far.suller.components.testimonialCard
@@ -18,7 +19,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.*
 
@@ -37,7 +38,7 @@ fun testimonialSection() {
 
 @Composable
 private fun testimonialContent() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     var selectedPage by remember { mutableStateOf(0) }
     Column(
         modifier = Modifier

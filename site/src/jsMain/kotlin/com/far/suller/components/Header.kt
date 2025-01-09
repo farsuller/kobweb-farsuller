@@ -1,7 +1,6 @@
 package com.far.suller.components
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import com.far.suller.models.Section
 import com.far.suller.models.Theme
 import com.far.suller.styles.LogoStyle
@@ -19,37 +18,43 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.fa.FaBars
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 
 @Composable
-fun header(onMenuClicked: ()-> Unit){
+fun header(onMenuClicked: () -> Unit) {
 
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
 
-    Row (modifier = Modifier
-        .fillMaxWidth(if(breakpoint > Breakpoint.MD) 80.percent else 90.percent)
-        .margin(topBottom = 50.px),
+    Row(
+        modifier = Modifier
+            .fillMaxWidth(if (breakpoint > Breakpoint.MD) 80.percent else 90.percent)
+            .margin(topBottom = 50.px),
         horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically) {
+        verticalAlignment = Alignment.CenterVertically
+    ) {
 
-        leftSide(breakpoint = breakpoint,
-            onMenuClicked = onMenuClicked)
-        if(breakpoint > Breakpoint.MD){
+        leftSide(
+            breakpoint = breakpoint,
+            onMenuClicked = onMenuClicked
+        )
+        if (breakpoint > Breakpoint.MD) {
             rightSide()
         }
     }
 }
 
 @Composable
-fun leftSide(breakpoint: Breakpoint,
-             onMenuClicked: ()-> Unit){
-    Row (verticalAlignment = Alignment.CenterVertically) {
-        if (breakpoint <= Breakpoint.MD){
+fun leftSide(
+    breakpoint: Breakpoint,
+    onMenuClicked: () -> Unit
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        if (breakpoint <= Breakpoint.MD) {
             FaBars(
                 modifier = Modifier
                     .margin(right = 15.px)
@@ -63,29 +68,27 @@ fun leftSide(breakpoint: Breakpoint,
         Image(
             modifier = LogoStyle.toModifier(),
             src = Res.Image.logo,
-            desc ="Logo Image"
         )
     }
 }
 
 @Composable
-fun rightSide(){
+fun rightSide() {
     Row(
         modifier = Modifier.fillMaxWidth()
             .borderRadius(r = 50.px)
             .backgroundColor(Theme.LighterGray.rgb)
             .padding(all = 20.px),
         horizontalArrangement = Arrangement.End
-    ){
-        Section.values().take(6).forEach {
-            section ->
+    ) {
+        Section.entries.toTypedArray().take(6).forEach { section ->
             Link(
-               modifier = NavigationItemStyle.toModifier()
-                   .padding(right = 30.px)
-                   .fontFamily(FONT_FAMILY)
-                   .fontSize(18.px)
-                   .fontWeight(FontWeight.Normal)
-                   .textDecorationLine(TextDecorationLine.None),
+                modifier = NavigationItemStyle.toModifier()
+                    .padding(right = 30.px)
+                    .fontFamily(FONT_FAMILY)
+                    .fontSize(18.px)
+                    .fontWeight(FontWeight.Normal)
+                    .textDecorationLine(TextDecorationLine.None),
                 path = section.path,
                 text = section.title
 

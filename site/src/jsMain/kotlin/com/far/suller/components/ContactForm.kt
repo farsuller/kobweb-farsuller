@@ -12,15 +12,15 @@ import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.*
 
 @Composable
-fun contactForm(breakpoint: Breakpoint){
-    Form (
+fun contactForm(breakpoint: Breakpoint) {
+    Form(
         action = "https://formspree.io/f/xeqwplzj",
         attrs = Modifier
             .attrsModifier {
@@ -28,12 +28,12 @@ fun contactForm(breakpoint: Breakpoint){
             }
             .toAttrs()
 
-    ){
+    ) {
         Label(
             attrs = Modifier
                 .classNames("form-label")
                 .toAttrs(),
-            forId ="inputName"
+            forId = "inputName"
         ) {
             Text("Name")
         }
@@ -45,14 +45,15 @@ fun contactForm(breakpoint: Breakpoint){
                 .classNames("form-control")
                 .margin(bottom = 10.px)
                 .width(
-                    if(breakpoint >= Breakpoint.MD) 500.px
-                    else 250.px)
+                    if (breakpoint >= Breakpoint.MD) 500.px
+                    else 250.px
+                )
                 .backgroundColor(Theme.LighterGray.rgb)
-                .boxShadow(0.px,0.px,0.px,0.px, null)
+                .boxShadow(0.px, 0.px, 0.px, 0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Full Name")
                     attr("name", "name")
-                    attr("required" , "true")
+                    attr("required", "true")
                 }
                 .toAttrs()
         )
@@ -61,7 +62,7 @@ fun contactForm(breakpoint: Breakpoint){
             attrs = Modifier
                 .classNames("form-label")
                 .toAttrs(),
-            forId ="inputEmail"
+            forId = "inputEmail"
         ) {
             Text("Email")
         }
@@ -73,14 +74,15 @@ fun contactForm(breakpoint: Breakpoint){
                 .classNames("form-control")
                 .margin(bottom = 10.px)
                 .width(
-                    if(breakpoint >= Breakpoint.MD) 500.px
-                    else 250.px)
+                    if (breakpoint >= Breakpoint.MD) 500.px
+                    else 250.px
+                )
                 .backgroundColor(Theme.LighterGray.rgb)
-                .boxShadow(0.px,0.px,0.px,0.px, null)
+                .boxShadow(0.px, 0.px, 0.px, 0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Email Address")
                     attr("name", "email")
-                    attr("required" , "true")
+                    attr("required", "true")
                 }
                 .toAttrs()
         )
@@ -89,7 +91,7 @@ fun contactForm(breakpoint: Breakpoint){
             attrs = Modifier
                 .classNames("form-label")
                 .toAttrs(),
-            forId ="inputMessage"
+            forId = "inputMessage"
         ) {
             Text("Message")
         }
@@ -101,14 +103,15 @@ fun contactForm(breakpoint: Breakpoint){
                 .margin(bottom = 20.px)
                 .height(150.px)
                 .width(
-                    if(breakpoint >= Breakpoint.MD) 500.px
-                    else 250.px)
+                    if (breakpoint >= Breakpoint.MD) 500.px
+                    else 250.px
+                )
                 .backgroundColor(Theme.LighterGray.rgb)
-                .boxShadow(0.px,0.px,0.px,0.px, null)
+                .boxShadow(0.px, 0.px, 0.px, 0.px, null)
                 .attrsModifier {
                     attr("placeholder", "Your Message")
                     attr("name", "message")
-                    attr("required" , "true")
+                    attr("required", "true")
                 }
                 .toAttrs()
         )
